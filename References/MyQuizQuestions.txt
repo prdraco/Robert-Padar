@@ -1,0 +1,40 @@
+Question 1 - File Object Methods
+Which is the good answer for file Object Method?
+close
+write()
+copy()
+colselines()
+2
+The answer is write()!
+Question 2 - Introducing String Methods
+Which is the correct Introducing String Methods?
+undercase()
+upper
+capitalize()
+lowercase()
+3
+The answer is capitalize()!
+Question 3 - Converting Strings
+Which is the right converting strings method?
+init()
+string()
+num()
+float()
+4
+The answer is float()!
+Question 4 - Arithmetic Operators
+Which is the right arithmetic operator?
+addition
+subdivision
+floor exponent
+modition
+1
+The answer is addition!
+Question 5 - Assigning Values
+Which is the right assigning values operator?
+!+
+-+
+!=
++%
+3
+The answer is != as not equal to!
