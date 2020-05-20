@@ -104,9 +104,9 @@ def checkGuess(self):
         msgBox.showinfo("Find The Diamond", "Congratulations, you won!")
         msgBox.askquestion("Question", "Do you want to play again?")
         if YES:
-            diamond()
+            starter()
         else:
-            exit
+            GameExit()
     else:
         guess()
         msgBox.showinfo("Alert", "Sorry, guess was wrong!")
