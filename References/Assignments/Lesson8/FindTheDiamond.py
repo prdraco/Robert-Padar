@@ -11,13 +11,16 @@ window=Tk()
 window.title("Find The Diamond")
 window.geometry("1230x490")
 window.configure(bg="plum")
-guesses=0
+guesses = 0
 def random():
     global rndBox
     rndBox = rnd.randint(1, 11)
 def guess():
     global guesses
-    guesses+=1
+    if guesses != 3:
+        guesses+=1
+    elif guesses == 3:
+        guesses = 1
 
 #Create the widgets
 btn1=Button(window, width=10, height=3)
@@ -118,6 +121,8 @@ def checkGuess(self):
             msgBox.showinfo("Alert", "Your gusses are %d" % guesses)
             diamond()
 def GameExit():
+    # code to exit
+    window = Tk()
     window.destroy
     
 def starter():
