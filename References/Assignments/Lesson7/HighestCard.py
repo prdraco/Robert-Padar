@@ -15,35 +15,35 @@
 #the winning player or "Draw" in the event of a tie.
 import Cards, Games
 
-class BJ_Card(Cards.Card):
-# Defines a Blackjack card
+class Highest_Card(Cards.Card):
+# Defines a Highest game cards
 	ACE_VALUE = 1
 	@property
 	def value(self):
 		if self.is_face_up:
-			val = BJ_Card.CARDS.index(self.card) + 1
+			val = Highest_Card.CARDS.index(self.card) + 1
 			if val > 10:
 				val = 10
 		else:
 			val = None
 		return val
 	# This object returns a number between 1 and 10,
-	# representing the value of a Blackjack card
+	# representing the value of a Highest card
 
-class BJ_Deck(Cards.Deck):
-# Defines a Blackjack deck
+class Highest_Deck(Cards.Deck):
+# Defines a Highest game deck
 	def populate(self):
-		for suit in BJ_Card.SUITS:
-			for card in BJ_Card.CARDS:
-				self.cards.append(BJ_Card(card, suit))
+		for suit in Highest_Card.SUITS:
+			for card in Highest_Card.CARDS:
+				self.cards.append(Highest_Card(card, suit))
 
-class BJ_Hand(Cards.Hand):
-# Defines a Blackjack hand
+class Highest_Hand(Cards.Hand):
+# Defines a cards in hand
 	def __init__(self, name):
-		super(BJ_Hand, self).__init__()
+		super(Highest_Hand, self).__init__()
 		self.name = name
 	def __str__(self):
-		rep = self.name + ":\t" + super(BJ_Hand, self).__str__()
+		rep = self.name + ":\t" + super(Highest_Hand, self).__str__()
 		if self.total:
 			rep += "(" + str(self.total) + ")"
 		return rep
@@ -60,65 +60,53 @@ class BJ_Hand(Cards.Hand):
 		# Check if hand contains an Ace
 		contains_ace = False
 		for card in self.cards:
-			if card.value == BJ_Card.ACE_VALUE:
+			if card.value == Highest_Card.ACE_VALUE:
 				contains_ace = True
 		# If hand is low enough treat Ace as 11
 		if contains_ace and t<= 11:
 			# Add 10 since we already added 1 for the Ace
 			t += 10
 		return t
-	def is_busted(self):
-		return self.total > 21
 
-class BJ_Player(BJ_Hand):
-# Defines a Blackjack player
-	def bust(self):
-		print(self.name, "busts.")
-		self.lose()
+class Highest_Player(Highest_Hand):
+# Defines a Highest Card player
 	def lose(self):
 		print(self.name, "loses.")
 	def win(self):
 		print(self.name, "wins.")
 	def push(self):
-		print(self.name, "draws.")
+		print(self.name, 'draws.')
 		
-class BJ_Dealer(BJ_Hand):
-# Defines a Blackjack dealer
-	def bust(self):
-		print(self.name, "busts.")
-	def flip_first_card(self):
-		first_card = self.cards[0]
-		first_card.flip()
-		
-class BJ_Game(object):
-# Defines a Blackjack game
+class Highest_Game(object):
+# Defines a Highest Card game
 	def __init__(self, names):
 		self.players = []
 		for name in names:
-			player = BJ_Player(name)
+			player = Highest_Player(name)
 			self.players.append(player)
-		self.dealer = BJ_Dealer("Dealer")
-		self.deck = BJ_Deck()
+		self.dealer = Highest_Player(Highest_Hand)
+		self.deck = Highest_Deck()
 		self.deck.populate()
-		self.deck.shuffle()
+
 	def play(self):
 		# Deal initial 1 cards to all players
 		self.deck.deal(self.players, per_hand = 1)
 		for player in self.players:
 			print(player)
-		if player.total > self.dealer.total:
-			player.win()
-		elif player.total < self.dealer.total:
-			player.lose()
-		else:
-			player.push()
-		
+		max = 1
+		winner = 'NoBudy'
+		for player in self.players:
+			if player.total > max:
+				max = player.total
+				winner = player
+		print('\nAnd the winner is: ', winner)
+
 		# Remove everyone's cards
 		for player in self.players:
 			player.clear()
 
 def main():
-	print("\nWelcome to the Python Blackjack game.\n")
+	print("\nWelcome to the Python Highest Card game.\n")
 	names = []
 	number = Games.askForNumber("How many players? (2-7): ", low = 2, high = 8)
 	print()
@@ -133,9 +121,10 @@ def main():
 			names.append(name)
 			print()
 			i += 1
-	game = BJ_Game(names)
+	game = Highest_Game(names)
 	again = "Y"
 	while again == "y" or again == "Y":
 		game.play()
 		again = Games.askYesNo("\nDo you want to play again?: ")
+	
 main()

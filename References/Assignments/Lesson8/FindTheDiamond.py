@@ -1,4 +1,7 @@
-#Your assignment is to build a Find The Diamond game, where the diamond is randomly hidden in one of ten boxes and the objective of the game is to find the diamond by clicking on the box where you think it is hidden. You have three guesses to find the diamond.
+#Your assignment is to build a Find The Diamond game, where the 
+# diamond is randomly hidden in one of ten boxes and the objective 
+# of the game is to find the diamond by clicking on the box where 
+# you think it is hidden. You have three guesses to find the diamond.
 
 from tkinter import *
 import tkinter.messagebox as msgBox
@@ -8,12 +11,14 @@ window=Tk()
 window.title("Find The Diamond")
 window.geometry("1230x490")
 window.configure(bg="plum")
+guesses=0
 def random():
     global rndBox
-    rndBox = rnd.randint(1, 4)
-    print(rndBox)
-random()
-print(rndBox)
+    rndBox = rnd.randint(1, 11)
+def guess():
+    global guesses
+    guesses+=1
+
 #Create the widgets
 btn1=Button(window, width=10, height=3)
 btn2=Button(window, width=10, height=3)
@@ -42,17 +47,18 @@ btn10.grid(row=1, column=4, padx=10, pady=10)
 htd.grid(row=2, column=0, columnspan=2, sticky=W, padx=30, pady=20)
 label1.grid(row=2, column=2, columnspan=3, sticky=W, padx=30, pady=10)
 
-btn1.configure(text="1", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn2.configure(text="2", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn3.configure(text="3", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn4.configure(text="4", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn5.configure(text="5", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn6.configure(text="6", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn7.configure(text="7", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn8.configure(text="8", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn9.configure(text="9", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-btn10.configure(text="10", bg="yellow", fg="black", padx=55, pady=35, border=3, state=DISABLED)
-htd.configure(text="Hide The Diamond", bg="yellow", fg="black", padx=75, pady=35, border=3, state=NORMAL)
+#Configure the buttons
+btn1.configure(text="1", bg="yellow", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn2.configure(text="2", bg="blue", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn3.configure(text="3", bg="red", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn4.configure(text="4", bg="green", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn5.configure(text="5", bg="purple", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn6.configure(text="6", bg="brown", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn7.configure(text="7", bg="pink", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn8.configure(text="8", bg="dark blue", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn9.configure(text="9", bg="dark red", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+btn10.configure(text="10", bg="orange", fg="white", padx=55, pady=35, border=3, state=DISABLED)
+htd.configure(text="Hide The Diamond", bg="dark green", fg="white", padx=75, pady=35, border=3, state=NORMAL)
 label1.configure(text="Click the Hide Diamond button to start the game. \nThen, click on the box where you think the diamond is \nhidden. you have three guesses to find it.", bg="plum", fg="black", padx=200, pady=35)
 
 def handler1():
@@ -81,27 +87,39 @@ def diamond():
     btn2.configure(state=NORMAL, command=handler2)
     btn3.configure(state=NORMAL, command=handler3)
     btn4.configure(state=NORMAL, command=handler4)
-    btn5.configure(state=NORMAL)
-    btn6.configure(state=NORMAL)
-    btn7.configure(state=NORMAL)
-    btn8.configure(state=NORMAL)
-    btn9.configure(state=NORMAL)
-    btn10.configure(state=NORMAL)
+    btn5.configure(state=NORMAL, command=handler5)
+    btn6.configure(state=NORMAL, command=handler6)
+    btn7.configure(state=NORMAL, command=handler7)
+    btn8.configure(state=NORMAL, command=handler8)
+    btn9.configure(state=NORMAL, command=handler9)
+    btn10.configure(state=NORMAL, command=handler10)
     htd.configure(state=DISABLED)
     random()
     
 def checkGuess(self):
-    if handler1==rndBox:
+    if self==rndBox:
         msgBox.showinfo("Find The Diamond", "Congratulations, you won!")
-        YesNo=msgBox.askquestion("Question", "Do you want to play again? (y/n)")
+        msgBox.askquestion("Question", "Do you want to play again?")
         if YES:
-            starter()
+            diamond()
         else:
             exit
     else:
+        guess()
         msgBox.showinfo("Alert", "Sorry, guess was wrong!")
-        starter()
-
+        if guesses==3:
+            msgBox.showinfo("Alert", "You are out of Guesses! \n The Diamond was hidden in box %d" % rndBox)
+            msgBox.askquestion("Question", "Do you want to play again?")
+            if YES:
+                starter()
+            else:
+                GameExit()
+        else:
+            msgBox.showinfo("Alert", "Your gusses are %d" % guesses)
+            diamond()
+def GameExit():
+    window.destroy
+    
 def starter():
     btn1.configure(state=DISABLED)
     btn2.configure(state=DISABLED)
