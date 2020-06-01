@@ -8,5 +8,13 @@ def homepage_view(request, *args, **kwargs): #args, kwargs
     #return HttpResponse('<h1>Boldog Nevnapot Anita!</h1>') #string of html code
     return render(request, 'home.html', {})
 
-def contact_view(*args, **kwargs):
-    return HttpResponse('<h1>Contact Page!</h1>') #string of html code
+def contact_view(request, *args, **kwargs):
+    return render(request, 'contact.html', {})
+
+def about_view(request, *args, **kwargs):
+    my_content = {
+        'my_text': 'This is about us!',
+        'my_number': 123,
+        'my_list': [231,632,36,41,50, 'Rob'],
+    }
+    return render(request, 'about.html', my_content)
