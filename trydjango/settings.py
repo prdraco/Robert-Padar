@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #third party
     #own apps
+    'helloworld',
     'documents',
 ]
 
