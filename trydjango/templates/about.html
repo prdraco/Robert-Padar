@@ -2,9 +2,11 @@
 
 {% block content %}
 <h1>About</h1>
+
+<h3>{{ title|capfirst|title }}</h3>
 <p>This is a Template</p>
 
-
+{{ my_html|slugify }}
 <p>
 
     {{ my_text }} {{ my_number }}
@@ -17,9 +19,11 @@
 
 </ul>
 <ul>
-    {% for my_sub_item in my_list %}
+    <h3>{% for my_sub_item in my_list %}
         <li>{{ forloop.counter }} - {{ my_sub_item }}</li>
     {% endfor %}
+    </h3>
+    
 </ul>
 
 {% endblock %}
