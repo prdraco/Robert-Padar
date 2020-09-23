@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="normalize.css">
+</head>
+<article>
+    <header> <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+        padding: 10px;
+    }
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    h3 {
+        margin: 2em;
+    }
+    </style>
+    <h1 style="color: lightblue;"
+    style="text-shadow: 2px 2px 4px black;">Understanding the CSS Box Model</h1>
+      
+    <b style="color: crimson;">Posted by Robert Padar</b>
+      
+    <p style="text-align: center;">   
+        - What is the Box Model
+        - Height and width
+        - Margin and Padding
+        - Working with Borders
+    
+    <head>
+    <style type="text/css">
+    
+    #image1 {
+        margin: 30px;
+        padding: 30px;
+        text-align: justify;
+        float: right;
+        position: relative;
+        left: -900px;
+        top: -55px;
+    }
+    </style>
+    </head>
+
+    <body>
+    <h1>What is the Box Model</h1>
+    <h3> All elements in CSS are treated as a box essentially wraping around every single HTML element on the page</h3>
+    <h3> The box consists of four properties:</h3>
+    <div id="image1"><img src="Box Model.gif" alt="adjust" width="300px" height="180px"></div>
+    <p> -Margin</p>
+    <p> -Border</p>
+    <p> -Padding</p>
+    <p> -Content</p>
+    </body>
+</html>
+
+<article>
+    <style type="text/css">
+    #box1 {
+        margin: 50px;
+        padding: 10px;
+        border: 5px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: justify;
+        float: left;
+    }
+    
+    #box2 {
+        margin: 50px;
+        padding: 50px;
+        border: 5px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: justify;
+        float: left;
+    }
+    </style>
+
+    <div id="box1">Learning Cascading Style Sheets is so much Fun!</div>
+    <div id="box2">Learning Cascading Style Sheets is so much Fun!</div>
+
+    <p style="padding: 40px;" style="width: 600px;">"Lorom ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut alliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+         mollit anim id laborum.""
+    </p>
+</article>
+<h1 style="padding: 140px;">Height and Width</h1>
+<h3 style="margin-top: -70px;"> The height and width properties of the box deal with the dimensions of the content area and are given as # of pixels or percentage</h3>
+<p>     -Height:100px;</p>
+<p>     -Height:80%</p>
+<p>     -Height:auto</p>
+<h3>If the amount of content exceeds the size of the box surrounding its element the content will flow out of the box and result in a badly formatted web page</h3>
+<p>     Use the overflow property to prevent this:
+<p>         -Visible</p>
+<p>         -Hidden</p>
+<p>         -Scroll</p>
+<p>         -Auto</p>
+
+<h1>Margin and Padding</h1>
+<h3>The padding controls the free space around the content inside each box while the margin controls the free space around the outside of the box</h3>
+<h3>Both of these controls are transparent and therefore changing their color is not possible however, the width can be modified to adjust the positioning of elements</h3>
+<h3>Several syntax options exist for both margins and padding</h3>
+<h3>Margin and Padding syntax:</h3>
+<p> -Margin: 25px; - sets all four margins to 25px</p>
+<p> -Margin: 25px 50px - sets the top and bottom margins to 25px and the left and right margins to 25px</p>
+<p> -{Margin-top: 25px; margin-right: 50px, margin-bottom: 50px; margin-left: 10px;}</p>
+<p> -Margin: 25px 50px 50px 10px</p>
+<h3>Additionally margins (not padding) can have negative values</h3>
+
+<h1>Working with Borders</h1>
+
+<h3> The CSS border properties allow you to set various properties for the border of each element in the CSS box model</h3>
+<p>     -Border-width</p>
+<p>     -Border-color</p>
+<p>     -Border-style</p>
+<p>     -Border-radius</p>
+<h3> The border-with is the thickness of the border that surrounds each HTML element</h3>
+<p>     -Normally set in pixels</p>
+<p>     -Provides the alternative of using one of three predefined values:</p>
+<p>         -Thin</p>
+<p>         -Medium</p>
+<p>         -Thick</p>
+<p>     -Use the same syntax as padding and margins:</p>
+<p>         -Border-width: 25px - set all borders to 25px</p>
+<p>         -Border-width: 25px thin - sets the top and bottom to 25px and the left/right to thin</p>
+<p>         -Border-top-width: 30px</p>
+<h3> Border-color us used to configure the color of the border</h3>
+<p>     Use one of 140 predefined color names</p>
+<p>     Use RGB notation</p>
+<p>         -All web colors are represented by the three primary colors of Red, Green and Blue (RGB)</p>
+<p>         -RGB (0,255,0) or RGB (255,0,255)</p>
+<p>     Use hexadecimal notation - uses 6 digits to represent color</p>
+<p>         - 00 00 00</p>
+<p>         - FF 00 00</p>
+<p>         - FF 00 FF</p>
+<p>     Set to transparent</p>
+<h3> Border-style is to configure the various border-styles which are availabe in CSS</h3>
+<p>     -none</p>
+<p>     -Dotted</p>
+<p>     -Dashed</p>
+<p>     -Solid</p>
+<p>     -Double</p>
+<p>     -Groove</p>
+<p>     -Ridge</p>
+<p>     -Inset</p>
+<p>     -Outset</p>
+<h3> Border-radius is used to create borders with rounded corners</h3>
+<p>     Values are commonly given in pixel or percentage</p>
+<p>     Can be set individually for the four corners:</p>
+<p>         -Top-left</p>
+<p>         -Top-right</p>
+<p>         -Bottom-right</p>
+<p>         -Bottom-left</p>
+<p>     Examples:</p>
+<p>         -Border-radius: 5px;</p>
+
+
+</article>

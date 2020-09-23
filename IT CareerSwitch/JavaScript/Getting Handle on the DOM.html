@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Getting Handle on the DOM!</title></head>
+    <body>
+        <h1>Introduction To The HTML Document Object Model</h1>
+
+        <h2>Document Object Model(DOM)</h2>
+        <h2>The JavaScript code that we write does not operate in a vacum but instead it is 
+            attached to HTML web pages
+        </h2>
+        <h2>The web page is the script upon which we are working so we must be able to reach
+            into the page to get information and have the page respond back to our code
+        </h2>
+        <h2>Understanding the DOM is the way to do that, it is an incredibly important part of 
+            understanding the functionality of JavaScript</h2> 
+        <h2>What exactly is the DOM?</h2>
+        <h3>Its not a language</h3>
+        <h3>Its not a part of JavaScript</h3>
+        <h3>It's a fairly vague term</h3>
+        <h2>The web definition is "The Document Object Model is an application programming
+            interface that defines logical structure of well-formed an XML and HTML documents"
+        </h2>
+        <h3>Not overly helpful</h3>
+        <h2>Taking apart the statement DOM will help to understand</h2>
+        <h3>Document - is the web page itself</h3>
+        <h3>Object - refers to the objects that are created based on the HTML structure</h3>
+        <h3>Model - a consistent way to approach the vaious objects</h3>
+        <img style="margin: 40px;" src="pic_htmltree.gif" alt="DOM">
+        <h2>So the HTML DOM is a standard object model and programming interface for
+            HTML which defines
+        </h2>
+        <h3>HTML elements as objects</h3>
+        <h3>The properties of all HTML elements</h3>
+        <h3>The methods to access all HTML elements</h3>
+        <h3>The events for all HTML elements</h3>
+        <h2>The HTML DOM is a standard for how to get, change, add or delete HTML elements</h2>
+        <h2>DOM methods are actions that you can perform on HTML elements</h2>
+        <h2>DOM properties are values that you can set or change</h2>
+        <h3>All HTML elements are defined as objects and accessible through JavaScript</h3>
+        <h3>A property is a value that you can retrieve or modify</h3>
+        <h4>Changing the content of an HTML element</h4>
+        <h3>A method is an action that you can do</h3>
+        <h4>Adding an HTML element</h4>
+        <h4>Deleting an HTML element</h4>
+        <h2>There are multiple ways of finding and accessing DOM elements which is the first
+            step to dealing with the HTML DOM
+        </h2>
+        <h2>If you want to manipulate the HTML elements you must first locate them</h2>
+        <h2>The key is understanding "where" in the DOM is the item that you wish to grab hold
+            of as well as the critical question "Is it unique"
+        </h2>
+        <h2>Options</h2>
+        <h3>Find HTML elements by ID - document.getElementById</h3>
+        <h3>Find HTML elements by tag name - document.getElementsByTagName</h3>
+        <h3>Find HTML elements by class - document.getElementsByClassName</h3>
+        <h3>Find HTML elements by CSS selectors - document.querySelectorAll</h3>
+        <h2>Once you have the element you can access invidual attributes using the 
+            getAttribute() method
+        </h2>
+        <h2>This method will allow you to access the attributes for any element on the page</h2>
+        <h4 style="margin: 20px;">myElement.getAttribute("align")</h4>
+        <h2>Accessing DOM elements is the first step but often we would like to modify those
+            elements eighter entirely or in part, such as attributes
+        </h2>
+        <h2>One such way of changing elements is to modify the content which is performed
+            using the innerHTML property
+        </h2>
+        <h2>Another option is to modify attributes</h2>
+        <h4 style="margin: 20px;">myElement.setAttribute("align","left");</h4>
+        <h2>Another way in which the HTML can be changed is to actually modify the style that
+            is used using CSS properties
+        </h2>
+        <h2>Any CSS styles can be modified on the page load or based on events on the page</h2>
+        <h3>The key is to use the CSS property names without the (-) character</h3>
+        <li>Font-family becomes fontFamily</li>
+        <li>Border-style becomes borderStyle</li>
+        <li>Background-color becomes bacgkgroundColor</li>
+        <h3>Using setAttribute("style","color:blue");would also be supported and can use the (-)</h3>
+        <h4 style="margin: 20px;">(script)<br>
+        document.getElementById("p2").style.color = "blue";<br>
+        (/script)</h4>
+        
+        <h1>Creating DOM elements</h1>
+
+        <h2>Although the innerHTML property can be used to add content to a page its not the 
+            cleanest method available with plenty of chance for error
+        </h2>
+        <h2>instead you cn create elements within the DOM and once created add a text node to those elements</h2>
+        <h2>This results in a more precise and better way of modifying page content which always involves two steps</h2>
+        <h3>Create the elements</h3>
+        <h3>Add the element to the right place in the document</h3>
+        <h4 style="margin: 20px;">var newElement = document.createElement("li");<br>
+        myElement.appendchild(newElement);</h4>
+        <h2>The next step is eighter</h2>
+        <h3>Access the innerHTML property of the element we just created to add content</h3>
+        <h3>Create a new text node and attach to the element (more precise)</h3>
+        <h4 style="margin: 20px;">var myText = dcument.createTextNode("new list item text");<br>
+        newElement.appendchild(myText);</h4>
+
+        <h1>Responding to Events</h1>
+
+        <h2>Thus far our code has been loaded along with the web page which is really not very useful</h2>
+        <h2>JavaScript is supposed to control the behavior of the page and its interactivity with 
+            the user which means that our code should be able to respond to actions that are taken on the page
+        </h2>
+        <h2>This is where events and event listeners come into play</h2>
+        <h3>You don't cause the events they are occuring all the time</h3>
+        <h3>You choose which of these events that you want to respond to</h3>
+        <h3>You write an event listener in order to handle those particular events and respond the way that you would like</h3>
+        <h2>Three ways to react to events:</h2>
+        <li>Write the JavaScript code directly into the HTML</li>
+        <li>Specify the element and event you want to handle and write a function</li>
+        <li>Use the addEventListener() function</li>
+        
+        <h2>The first option is a simple option and is often done but really not recommended</h2>
+        <h3>It mixes the HTML code and the JavaScript</h3>
+        <h3>Its not very portable</h3>
+        <h3>Generally not a good idea</h3>
+        <h4 style="margin: 20px;">(button onclick = 'alert("Hello World");')run some JavaScript(/button)</h4>
+        
+        <h2>The second option is often the best and involves identifying the element that you want 
+            to act upon and the event that you would like to respond to:
+        </h2>
+        <h3>The element is referenced by using a variable</h3>
+        <h3>The event is chosen from the list of possible events</h3>
+        <h3>An anonymus function is created that contains the code that you want to run</h3>
+        <h4 style="margin: 20px;">myElement.onclick = function() {<br>
+        &ensp;&ensp;//your code goes here...<br>
+        }</h4>
+
+        <h2>The third option uses the addEventListener() method</h2>
+        <h2>Parameters:</h2>
+        <h3>The event you want to respond to minus the word on</h3>
+        <h3>The function that you want to call</h3>
+        <h3>True or False</h3>
+        <h4 style="margin: 20px;">document.addEventListener('click', myFunction, false);</h4>
+        <h2>There are times when we would like behavior on a page automatically controlled based on time lapse</h2>
+        <h2>Though not technically events they are very similar in their function</h2>
+        <h2>Two built in function will provide this capability quite easily in JavaScript</h2>
+        <h3>setTimeout()</h3>
+        <h3>setInterval()</h3>
+        <h4 style="margin: 20px;">setTimeout(myFunction, 5000) &ensp;&ensp;//setTimeout interval is in milliseconds</h4>
+        <h4 style="margin: 20px;">setInterval(changeImage, 5000) &ensp;&ensp;//also in milliseconds</h4>
+
+
+
+    </body>
+</html>

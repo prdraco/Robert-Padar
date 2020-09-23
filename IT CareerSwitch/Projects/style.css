@@ -1,0 +1,11 @@
+nav {
+    background-color: skyblue;
+}
+figcaption {
+    position: relative;
+    margin-top: -30px;
+    margin-left: 10px;
+}
+#image_1 {
+    position: relative;
+}

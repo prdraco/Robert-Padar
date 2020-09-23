@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="normalize.css">
+</head>
+<article>
+    <header> <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+        padding: 10px;
+    }
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    h3 {
+        margin: 2em;
+    }
+    </style>
+    <h1 style="color: lightblue;"
+    style="text-shadow: 2px 2px 4px black;">Using Colors and Backgrounds</h1>
+      
+    <b style="color: crimson;">Posted by Robert Padar</b>
+      
+    <p style="text-align: center;">   
+        - Working With Colors
+        - Working With Backgrounds
+    
+    </header>
+    <style type="text/css">
+    
+    #image1 {
+        margin: 30px;
+        padding: 30px;
+        text-align: justify;
+        float: right;
+        position: relative;
+        left: -900px;
+        top: -55px;
+    }
+    </style>
+
+    <body>
+    <h1>Working With Colors</h1>
+    <h3> CSS allows authors to define colors in two separate ways:</h3>
+    <p>     -Name</p>
+    <p>     -Number:</p>
+    <p>         -RGB notation</p>
+    <p>         -Hex notation</p>
+    <p>     There are 16 basic colors that are a part of the CSS3 specification along
+         with a much longer list of extended colors which are supported by today's browser</p>
+
+    <h3>When using numbers eihter RGB or HEX notation can be used and in both cases you are choosing the appropriate mixture of Red, Green and Blue (RGB):</h3>
+    <p> RGB notation:</p>
+    <p>     -The first number is the amount of red, the second the amound of green and the third the amount of blue</p>
+    <p>     -RGB (0,255,0) - pure Green or RGB (0,0,255) - pure blue</p>
+    <p>     -The actual code would be {color: rgb(0,255,0);}</p>
+    <p> Use hexadecimal notation - uses 6 digits to represent color but is the same where the first 2 digits are for red and so on:</p>
+    <p>     -00 00 00</p>
+    <p>     -FF 00 00</p>
+    <p>     -FF 00 FF</p>
+    <p>     -The actual code would be {color: #00FFFF;}</p>
+
+    <h3> Use www.colorschemer.com/online.html</h3>
+
+    <h3> Colors can be defined using two CSS properties:</h3>
+    <p>     Color:</p>
+    <p>         -Defines front color</p>
+    <p>         -Also used to define colors for links in various states using pseudo classes</p>
+    <p>     Background-Color or Background:</p>
+    <p>         -Defines the color of background for an entrie page or for particular elements on the page</p>
+
+    <h1>Working with Backgrounds</h1>
+
+    <h3> There are two option for configuring the background of an element in CSS:</h3>
+    <p>     -Background-color</p>
+    <p>     -Background-image</p>
+    <h3> The use of the background-color property is similar to how you specify the colr for a border in CSS boxes:</h3>
+    <p>     -Use the color name</p>
+    <p>     -Use rgb notation</p>
+    <p>     -Use hexadecimal notation</p>
+
+    <h3> In order to spice things up a bit some designers utilize the background-image property instead of a standard color</h3>
+    <h3> CSS provides great flexibility with how we want the image to be displayed</h3>
+    <h3> The first step is to specify the URL to the image using the background-image property:</h3>
+    <p>     -Background-image:url("imagefile.jpg");</p>
+
+    <h3> By default the image is placed in the top-left corner of the element and will automatically repeat itself bith vertically and horizontally</h3>
+    <h3> If this is not desirable you can the background-repeat property to modify the default setting:</h3>
+    <p>     -Repeat - the default setting repeats horizontally and vertically</p>
+    <p>     -Repeat-x - the image will only repeat horizontally</p>
+    <p>     -Repeat-y - the image will only repeat vertically</p>
+    <p>     -No-repeat - the image will not be repeated</p>
+
+    <h3>Examples:</h3>
+    <p>     -Background-repeat: repeat-x;</p>
+    <p>     -Background-repeat: no-repeat;</p>
+    <h3> By default the background image will scroll with the page but this can also be configured using the background-attachment property:</h3>
+    <p>     -Fixed</p>
+    <p>     -Scroll</p>
+
+    <h3> The background-position property is very useful if you want to specify which area of the background image you would like to display</h3>
+    <p>     -This is useful when you have an image that is larger than the element for which it is serving as a background</p>
+    <p>     -If you have an image that is 200x300 and an element that is 100x100 then only a portion of the image (the top left portion) will display</p>
+    <p>     -In order to display a different portion of the image you would need to change the position of the image</p>
+    
+    <h3> The most common way is to specify the background-position value using pixels and the syntax background-position:xpos ypos</h3>
+    <p>     The first number shifts horizontally:</p>
+    <p>         -Negative values shift the image to the left</p>
+    <p>         -Positive values shift the image to the right</p>
+    <p>     The second number shifts vertically:</p>
+    <p>         -Negative values shift the image up</p>
+    <p>         -Positive values shift the image down</p>
+
+
+    </body>
+</article>
+</html>

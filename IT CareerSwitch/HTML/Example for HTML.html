@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        article {
+            counter-reset: section;
+        }
+        article h1 {
+            color: black;
+            text-shadow: none;
+            counter-reset: subsection;
+        }
+        article h1:before {
+            counter-increment: section;
+            content: "Section " counter(section) ". ";
+        }
+        article h2:before {
+            counter-increment: subsection;
+            content: counter(section) ". " counter(subsection) " ";
+        }
+        article h2 {
+            font-size: 1em;
+        }
+        p::first-letter {
+            color: lightcoral;
+            font-size: 2em;
+        }
+        p t:first-child {
+            color: red;
+        }
+        p:first-child {
+            color: blue;
+        }
+        a {
+            margin-left: 20px;
+        }
+        span {
+            text-decoration: underline;
+        }
+        ul {
+            background-color: white;
+        }
+        .large {
+            font-size: 2em;
+        }
+        .clearFloat {
+            clear: both;
+        }
+        li:first-child {
+            color: red;
+        }
+    </style>
+    <meta charset="utf-8" lang="en">
+    <title>HTML Essentials: Home</title>
+    <meta name="description" content="sample site for 9781118657201">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="container">
+        <nav id="topnav">
+            <a href="index.html">Home&ensp; |</a>
+            <a href="about.html">About Us&ensp; |</a>
+            <a href="menu.html">Menu&ensp; |</a>
+            <a href="contact.html">Contact Us&ensp; |</a>
+        </nav>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#one">Go to performatted text</a></li>
+                <li><a href="#two">Go to example for lists</a></li>
+                <li><a href="#three">Go to example for tables</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <div id="content">
+        <h1 id="top">Welcome to the Deep Space Project</h1>
+        <p><span style="font-weight: bold;">There are all sorts of amazing things in space.</span> Just grab a telescope and take a look!
+            You'll be amazed at what you find.
+        </p>
+        <figure id="home-image">
+            <img style="width: 30%; height: auto;" src="images/deepspace.jpg" alt="El Nino">
+            <figcaption class="warning">El Nino winds produce amazing images</figcaption>
+        </figure>
+    </div>
+    <p><i>There are twenty different species</i> living inside this enclosure.<br>
+    <strong>Warning! Do not feed them: they will eat your shoes.</strong></p>
+    
+    <p>I am <t>In Red</t> and the next one is <t>not in Red</t></p>
+    <p>I am also in <t>Red</t> because I am the <t>first mach only in Red</t></p>
+    
+    <p>Let’s review some of the topics we covered throughout the lesson:</p>
+
+    <li>Semantic HTML introduces meaning to a page through specific elements that provide context as to 
+    what is in between the tags.</li>
+    <li>Semantic HTML is a modern standard and makes a website accessible for people who use screen 
+    readers to translate the webpage and improves your website’s SEO.</li>
+    <li>&lt;header&gt;, &lt;nav&gt; , &lt;main&gt; and &lt;footer&gt; create the basic structure of the webpage.</li>
+    <li>&lt;section&gt; defines elements in a document, such as chapters, headings, or any other area of 
+        the document with the same theme.</li>
+    <li>&lt;article&gt; holds content that makes sense on its own such as articles, blogs, comments, etc.</li>
+    <li>&lt;aside&gt; contains information that is related to the main content, but not required in order 
+        to understand the dominant information.</li>
+    <li>&lt;figure&gt; encapsulates all types of media.</li>
+    <li>&lt;figcaption&gt; is used to describe the media in &lt;figure&gt;.</li>
+    <li>&lt;video&gt;, &lt;embed&gt;, and &lt;audio&gt; elements are used for media files.</li>
+    <p>Now, apply this knowledge to become a better Web Developer.</p>
+
+    <p id="one">This is some performatted text
+        <br>
+        <pre class="large">   
+                Roses are red,
+                Violets are blue,
+                I'm pretty happy,
+                And so are you...</pre>
+    </p>
+
+    <div style="border: 1px solid black">Choose a car
+        <select name="cars">
+            <option value="Mercedes">Mercedes</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Audi">Audi</option>
+            <option value="Aston Martin">Aston Martin</option>
+        </select>
+    </div>    
+        <textarea name="comments" id="comments" cols="30" rows="10">
+            This is an amazing Car!
+        </textarea>
+    <br class="clearFloat">
+    <hr>
+    <form action="career">
+        <p><u>Employment Status:</u></p>
+        <input type="checkbox" name="empstat" value="Full-time" checked>Full Time<br>
+        <input type="checkbox" name="empstat" value="Part-time">Part Time<br>
+        <input type="checkbox" name="empstat" value="Temporary">Temporary<br><br>
+    </form>
+    <hr>
+    <form action="post" oninput="x.value=parseInt(years.value)">
+        <p><u>Highest Education:</u></p>
+        <input type="radio" name="edstat" value="High School" checked>High School<br>
+        <input type="radio" name="edstat" value="Undergraduate">Undergraduate<br>
+        <input type="radio" name="edstat" value="University">University<br><br>
+    <hr>    
+        <p>How many years?</p>
+        <input type="range" name="years" value="4" min="1" max="8">value<br><br>
+        <output name="x" for="years"></output>&ensp;years
+    <hr>
+        <p>Date of Birth:</p>
+        <input type="date" name="reqdate" min="" max=""><br><br>
+        
+    <hr>
+        <p>Just an example for color!</p>
+        <input type="color" name="color">
+    </form>
+
+
+    <p id="two">
+        <ol><h2>Example for oredered lists</h2>
+            <li>Wash the car</li>
+                <ul>
+                    <li>Pre-rinse</li>
+                    <li>Apply soap</li>
+                    <li>Rinse</li>
+                </ul>
+            <li>Buy Groceries</li>
+                <ul>
+                    <li>Milk</li>
+                    <li>Eggs</li>
+                </ul>
+            <li>Change the oil</li>
+        </ol>
+        <ul><h2>Important considerations (unordered lists)</h2>
+            <li>Use the correct type of oil</li>
+            <li>Don't forget to eat before grocery shopping</li>
+            <li>Don't forget to dry the car</li>
+        </ul>
+    </p>
+
+    <article>
+        <h1>CSS/HTML Tutorial</h1>
+        <h2>More Lessons</h2>
+        <h2>XHTML Lessons</h2>
+        <h2>XML lessons</h2>
+
+        <h1>JavaScript Lessons</h1>
+        <h2>jQuery Lessons</h2>
+        <h2>Knockout Lessons</h2>
+
+        <h1>More on C#</h1>
+        <h2>C# with PowerShell</h2>
+        <h2>AD Admin with PowerShell</h2>
+        <h2>VM in Hyper-V with PowerShell</h2>
+    </article><br><br>
+
+    <table border="1" id="three">Example for Tables:
+        <caption>Total Monthly sales for the Company</caption>
+        <colgroup>
+            <col style="background-color: gray; font-size: 120%;">
+            <col style="background-color: orange; font-size: 120%;">
+            <col style="background-color: gray; font-size: 120%;">
+        </colgroup>
+        <thead>
+            <tr><th colspan="3"><span style="background-color: gray;">Total sales revenue</span></th></tr>
+            <tr><th>Month</th><th>Sales</th><th>Total Revenue</th></tr>
+        </thead>
+        <tr><td>July</td><td>7</td><td>£1.500</td></tr>
+        <tr><td>August</td><td>12</td><td>£4.200</td></tr>
+        <tr><td>Sept</td><td>16</td><td>£3.500</td></tr>
+        <tr><td>Nov</td><td>15</td><td>£3.200</td></tr>
+
+    </table>
+    <footer>
+        <p>Authored by Robert Padar &copy; 2020 -myCompany LLC<br>
+        Contact info<br>
+        123 Oak ST<br>
+        Redditch, Worst<br>
+        11451</p>
+        <a href="#top">Go back to top</a>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+            <a href="FAQ's.html">FAQs</a>
+        </nav>
+    </footer>
+    </div>
+</body>
+</html>

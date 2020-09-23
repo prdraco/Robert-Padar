@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="normalize.css">
+</head>
+<article>
+    <header> <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+    }
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    h3 {
+        margin: 2em;
+    }
+    ul, li {
+        list-style-type: square;
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+    }
+    .shadowfilter {
+        margin: 12cm;
+        font-size: 2em;
+        text-shadow: 0px 3px 0px #8fa5a2, 0px 7px 5px rgba(0,0,0,0.15),
+        0px 12px 1px rgba(0,0,0,0.1), 0px 17px 17px rgba(0,0,0,1);
+    }
+    </style>
+    </header>
+    <body>
+    <h1 style="color: lightblue;"
+    style="text-shadow: 2px 2px 4px black;">Dynamic CSS3 Properties</h1>
+      
+    <b style="color: crimson;">Posted by Robert Padar</b>
+      
+    <p style="text-align: center;">   
+        - Using Transforms Part1
+        - Using Transforms Part2
+        - Using Transitions
+        - Using Animations
+        - CSS Project Part1
+        - CSS Project Part2
+        -Course Conclusion
+    
+    <h1>Using Transforms</h1>
+
+    <h3>The translate value of the transform property will reposition the object</h3>
+    <p> Translate will occur to the right by default</p>
+    <p> Translate occurs on the X axis by default:</p>
+    <p>     - -webkit-transform:translate(90px);</p>
+    <p>     - -To be explicit you can use translateX or translateY or specify both</p>
+    <p>         webkit-transform:translate(100px, 50px);</p>
+
+    <h3>The transform property in CSS3 allows you advanced management of web page element:</h3>
+    <p> -Rotation</p>
+    <p> -Scale</p>
+    <p> -Skew</p>
+    <p> -Reposition</p>
+    <h3>All of this while the margins are left intact results in the rest of the page being left intact</h3>
+    <h3>Transforms may not be supported by every browser that acces your site so you should check for support for implementing on your site</h3>
+    <p> Two types of transforms exist</p>
+    <p>     -2D</p>
+    <p>     -3D</p>
+    <h3>2D Transforms operate solely on the X and Y axis that traditional web development has beed confined to and all major web browsers support this type of transform</h3>
+    <h3>Types of transforms that will change the object display:</h3>
+    <p> -Translate - reposition an object</p>
+    <p> -Rotate - rotates an object</p>
+    <p> -Scale - stretchs an object in on of the available directions</p>
+    <p> -Skew</p>
+    <h3>All of these options are accessed through a singe style property known as transform</h3>
+    <h3>In the early days additional properties were required and are still ideal for your coding to ensure support:</h3>
+    <p> -moz-transform:</p>
+    <p> -webkit-transform:</p>
+    <p> -ms-transform:</p>
+    <p> -o-transform:</p>
+    <h3>The translate value of the transform property will reposition the object</h3>
+    <p> Translate will occur to the right by default</p>
+    <p> Translate occurs on the X axis by default:</p>
+    <p>     -webkit-transform:translate(90px);</p>
+    <p>     -to be explicit you can use translateX or translateY or specify both</p>
+    <p>         -webkit-transform:translate(100px, 50px);</p>
+    
+    <h3>The scale property of the transform style is used to stretchs or compress the elements on our page</h3>
+    <h3>Just like translate the default for scale is equivalent of scaleX but you can use scaleY when needed</h3>
+    <p> -Scale does not use the PX notation but intead uses a fraction amount</p>
+    <p> -webkit-transform:scale(2.0);</p>
+
+    <style> /*:hover will active when moves the mouse on the picture  */
+        #left:hover {
+            transform:scalex(2.0) scaley(2.0) translate(100px, 50px);
+        }
+        /*:active will active when the mouse clicks on the picture  */
+        #right:active {
+            transform:scalex(2.0) scaley(2.0) translate(150px, 100px);
+        }
+        #up:hover {
+            transform:skewX(20deg)skewY(30deg);
+        }
+        #down:hover {
+            transform:rotateY(30deg);
+            /* transform:perspective(1000px)rotateX(30deg)translate(100px 100px); */
+        }
+
+    </style>
+    <img src="Box Model.gif" class="image" id="right" alt="box"><img src="Box Model.gif" class="image" id="up" alt="Box">
+
+    <h3>It is possible to use multiple transforms at simultaneously</h3>
+    <h3>Consider the requirement for translating the image to a different portion of the screen and then scaling it in size:</h3>
+    <p> -webkit-transform:scaleY(0.5)translateX(90px);</p>
+    <h3>The transform property also allows us to change how elements look on the page by skewing them</h3>
+    <p> Changing a skew is change the 90 degree andles of intersection that exist on the box containing the element</p>
+    <p> A skew the X or Y axis would succeed</p>
+
+    <h3>In addition to 2D transforms 3D transforms are supported by most browsers currently and a part of the CSS3 specification</h3>
+    <h3>There are several steps and values which are used to achieve 3D rotation:</h3>
+    <p> -rotateY</p>
+    <p> -rotateX</p>
+    <p> -rotate</p>
+    <p> -rotate3D</p>
+    <p> -perspective (changes the perspective for a 3D view</p>
+
+    <h1>Transitions</h1>
+
+    <h3>Transitions describe functional and gradual state changes to objects on the web page and are possible with CSS3</h3>
+    <h3>Transitions are essentially a rudimentary from of animation</h3>
+    <h3>Any element on the page can have transitions applied but common implementation is a hyperlink that appears as a tab which transitions into the page in order to be selected</h3>
+    <h3>To create a transition effect, you must specify two thing:</h3>
+    <p> -the CSS property you want to add an effect to</p>
+    <p> -the duration of the effect</p>
+    <p> This allows you to change properties values smoothly over a period of time:</p>
+        <p>     div {</p>
+        <p>         width: 100px;</p>
+        <p>         height: 100px;</p>
+        <p>         background: red;</p>
+        <p>         -webkit-transition: width 2s; /*safari*/</p>
+        <p>         transition: width 2s</p>
+        <p>     }</p>
+
+    <h3>Example:</h3>
+    <style>
+
+    var div {
+            width:100px;
+            height:100px;
+            background:red;
+            transition: 2s;
+        }
+        div:hover {
+            width:300px
+        }
+    </style>
+        <var>
+        <div style="margin: 40px;"></div>
+        </var>
+
+    <h3>Additional properties</h3>
+    <p>Transition-timing-function - specifies the speed curve of the transition effect:</p>
+    <p> -Ease (default) specifies a slow start then fast, then end slow</p>
+    <p> -Linear - transition same speed from start to end</p>
+    <p> -Ease-in</p>
+    <p> -Ease-out</p>
+    <p> -Ease-in-out</p>
+    <h3>Transition-delay</h3>
+    <h3>Transition-duration</h3>
+
+<style>
+    .slider {
+        position: absolute;
+        left: 10px;
+        bottom: -3330px;
+        height: 30px;
+        line-height: 30px;
+        width: 0px;
+        overflow: hidden;
+        padding-left: 15px;
+        background-color: gray;
+        border: 2px solid black;
+        border-radius: 5px;
+
+        transition: width 2s, backgound-color 5.5s;
+        transition-timing-function: ease;
+    }
+    .slider:hover {
+        width: 80px;
+        background-color: lightcoral;
+    }
+</style>
+
+<a class="slider" href="Transitions2.htm">Click me!</a>
+
+
+    <h1>Using Animations</h1>
+    
+    <h3>CSS allows designers to apply animations to HTML objects with describe how the element changes from one state to another</h3>
+    <h3>Animations also provide the abiltiy to determine what the states of animation will be</h3>
+    <h3>Animations are considered as a series of keyframes each of which is a state the object will pass through over the course of its animation</h3>
+    <p> Animations are configured using at @  rule with the keyword keyframes:</p>
+    <p>     -@-webkit-keyframes colorChange {from {background-color:red;} to {background-color:blue;}}</p>
+    <p>     -then the animation is configured for a particular element by calling the name of the function using -webkit-animation:colorChange and specifying a timeframe</p>
+    
+    <style>
+    article div {
+        width:100px;
+        height:auto;
+        padding: 10px;
+        background:red;
+        border: 1px solid black;
+        color: white;
+        font-family: cursive;
+        text-align: center;
+        animation: colorChange 4s;
+    }
+    myclass {
+        animation: colorChange 4s;
+    }
+    @keyframes colorChange{
+        from{background-color: red;} to {background-color: blue;}
+    }
+    </style>
+    
+    <article>
+        <div class="myclass">This is an animated box</div>
+    </article>
+    
+</body>
+</article>
+</html> 

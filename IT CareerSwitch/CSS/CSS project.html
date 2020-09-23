@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JetSpeed Travel Agency</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="JetSpeedStyles.css">
+	<script src="jquery-3.5.1.slim.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("p").hide();
+			});
+		});
+	</script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo">
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="BookHotel.html">Book Hotel</a></li>
+                    <li><a href="BookFlight.html">Book Flight</a></li>
+                    <li><a href="BookPackage.html">Book Packege</a></li>
+                    <li><a href="TravelInsurance.html">Travel Insurance</a></li>               
+                </ul>
+            </div>
+        </nav>
+    </header>
+<main>
+    <div class="container">
+        <h1 id="mainTitle">Why Travel with us?</h1>
+        <p class="intro">Awarded #1 Travel agency for families with Childres</p>
+        <p>Accredited with the National Travel Agency</p>
+        <p>Awarded Best Tour Agency in 2014</p>
+		
+		<button>Click me to hide all p text!</button>
+       
+        <h1>Photo Galeries</h1>
+        <h2>Malaysia</h2> <img src="malaysia.jpg" alt="">
+        <h2>Japan</h2><img src="japan.jpg" alt="">
+        <h2>China</h2><img src="china.jpg" alt="">
+
+        <h1>What customers are saying</h1>
+        <div class="customerBox floatLeft">
+            <h1>
+                An incredible experience!
+            </h1>
+            <p>I went to Bali with some friends and booked through Jetspeed. Our guide was very informative and helpful and we had an amazing time!</p>
+            <h2>Jeremy Lang</h2>
+        </div>
+        <div class="customerBox floatRight">
+            <h1>Kudos to Jetspeed and Mrs. Deng!</h1>
+            <p>We booked a trip to China and received Mrs. Deng as a travel consultant. It couldn't have been easier and we had a wondeful time!</p>
+            <h2>
+                Cindy Lawson
+            </h2>
+        
+        </div>
+        <div class="clearFloat">
+            <h1>Upcoming Tour Dates</h1>
+            <table>
+                <tr><th>Tour Package</th><th>Dates</th><th>Status</th></tr>
+                <tr><td>8 Days 7 Nights China</td><td>3/1/2016 to 3/8/2016</td><td>Confirmed Departure, No Vacancies</td></tr>
+                <tr><td>10 Days 9 Nights Africa</td><td>3/8/2016 to 3/18/2016</td><td>Confirmed Departure</td></tr>
+                <tr><td>8 Days 7 Nights Greece</td><td>3/1/2016 to 3/8/2016</td><td>Confirmed Departure</td></tr>
+
+            </table>
+        </div>
+    </div>
+
+</main>
+<script src="script1.js" type="text/Javascript"></script>
+
+</body>
+<footer>
+    <div class="container">
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="press.html">Press Releases</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+    </div>
+</footer>
+
+</html>

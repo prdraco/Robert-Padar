@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        header li {
+            font-size: 1.5em;
+        }
+        .clearFloat {
+            clear: both;
+        }
+    </style>
+    </head>
+    <header>
+        <h1>Styling Web Pages</h1>
+        <li>HTML and CSS</li>
+        <li>Creating Inline Styles</li>
+        <li>Controlling Typography</li>
+        <li>Adding Color</li>
+        <li>Externalizing Styles</li>
+    </header>
+    <body>
+        <h1>HTML and CSS</h1>
+
+        <h2>HTML and CSS have a virtually inseparable relationship with one another to the
+            extent that in order to learn web development you must understand both languages
+        </h2>
+        <h3>HTML defines the structure</h3>
+        <h3>CSS defines the styling</h3>
+        <h2>The supposed "unstyled page" doesn't really exist</h2>
+        <h3>Default browser styles</h3>
+        <h3>Custon authored styles</h3>
+        <h2>Types of styles</h2>
+        <h3>Inline style - adding markup to invidual HTML elements</h3>
+        <h3>Internal style sheets - sequential markup added to the (style) element in the HTML document</h3>
+        <h3>External style sheets - linking HTML documents to a .css file that contains your styles</h3>
+        <h3>Style differently based on whether an HTML document is being viewed on a desktop
+            or a mobile device
+        </h3>
+        
+        <h2>Each style sheet is made up of style rules containing two part</h2>
+        <h3>Selector</h3>
+        <h3>Declaration:</h3>
+        <h4>Property</h4>
+        <h4>Value</h4>
+        <img src="images/selector.gif" alt="style rule">
+        
+        <h2>Declarations can configure a single or multiple values</h2>
+        <h3>H1 {color:teal;}</h3>
+        <h3>H1 {font-family:Arial;}</h3>
+        <h3>H1 {color:teal; font-family: Arial;}</h3>
+        <h2>Whitespace is irrelevant but each designer wil have their own preference as 
+            to how they write CSS style rules
+        </h2>
+        <h2>Style sheets override the browsers default styling and your style declarations 
+            will alter the final appearance of the web page in the browser
+        </h2>
+        <h3>Keep in mind that users can override your styles!</h3>
+
+        <h1>Creating Inline Styles</h1>
+
+        <h2>Inline styles use the style attribute are applied usally to a single element
+            within a page
+        </h2>
+        <h3>Essentially passing CSS within the HTML element</h3>
+        <h3>Not very efficient</h3>
+        <h3>Sometimes they are useful such as with HTML based email</h3>
+
+        <h1>Controlling Typography</h1>
+
+        <h2>In order to control fonts you need to understand various properties available
+            in CSS as well as cretain considerations
+        </h2>
+        <h3>Font Families</h3>
+        <h3>Font styles</h3>
+        <h3>Font weight</h3>
+        <h3>Font size</h3>
+        <h4>Px or em or %</h4>
+
+        <h2>Font Families</h2>
+        <h3>Generic family - groups with a similar look like "Serif" or "Monospace"</h3>
+        <h4>Serif fonts have small lines at the ends on some characters</h4>
+        <h4>Sans-serif fonts do not have those lines</h4>
+        <h4>Monospace fonts have characters all with the same width</h4>
+        <h3>Font family - a specific font family like "Times New Roman" or "Arial"</h3>
+
+        <h2>While its not required some additional information about the CSS Box Model
+            can be very helpful when dealing with typography
+        </h2>
+        <h2>The CSS box model is essentially a box that wraps around every HTML element:</h2>
+        <img style="margin-left: 4em;" src="images/Box Model.gif" alt="Box Model" title="Box Model">
+
+        <h1>Creating Your Own Web Site</h1>
+        
+        <h2>There are many steps to create a web site</h2>
+        <li>Choosing and purchasing a domain name - <a href="http://www.ionos.com">Buy a Domain</a></li>
+        <li>Choosing a hosting provider</li>
+        <li>Planning out the site design on paper</li>
+        <li>Creating the appropriate file structure</li>
+        <li>Creating your html documents</li>
+        <li>Creating your style sheets</li>
+        <li>Creating content for your html documents</li>
+        <li>Putting it all together</li>
+    </body>
+</html>

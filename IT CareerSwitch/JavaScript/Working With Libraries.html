@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <style> 
+        a {
+            text-shadow: 3px 3px grey;
+            font-weight: bolder;
+            font-size: 2.5em;
+            font-style: inherit;
+            padding: 30%;
+        }
+        main li {
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("div").animate({left: '250px'});
+            });
+        });
+    </script>
+        
+    <head><title>Working With Libraries</title></head>
+    <header><a>Working With Libraries</a> 
+        <main>
+            <li>Introduction to Libraries</li>
+            <li>Installing and Using jQuery</li>
+            <li>Modifying Web Pages Using jQuery</li>
+        </main>
+    </header> 
+    <body>
+        
+        <h1>Introduction to Libraries</h1>
+
+        <h2>JavaScript libraries are collections of code that you can use in order to gain access
+            to additional functionality or just to achieve results more quickly and easily
+        </h2>
+        <h2>Libraries have been developed over time by advanced JavaScript programmers
+            and the vast majority are freely available and considered open source
+        </h2>
+        <h2>The use of libraries can really save a lot of time and effort</h2>
+        <h2>Several popular libraries exist and you don;t have to make a single choice though
+            jQuery is by far the most common
+        </h2>
+        <h3>jQuery:</h3>
+        <h4>Uses by many of the largest companies in the world<br>
+        Uses CSS selectors to manipulate DOM objects on the page<br>
+        Provides a companion UI framework and numerous othe plug-ins</h4>
+        <h3>Prototype:</h3>
+        <h4>Provides a simple API to perform common web tasks<br>
+        Enchances JavaScript by providing classes and inheritance</h4>
+        <h3>MooTools:</h3>
+        <h4>A framework offering an API to make common JavaScript programming easier<br>
+        Includes lightweight effects and some animations</h4>
+        <h2>In order to use these libraries you must add them to your page in the (script) tags
+            either in the (head) or (body) section of the document
+        </h2>
+        <h3>Src attribute tells where to get the file<br>
+        Added just like any othe external script<br>
+        Can be stored locally<br>
+        Can be obtained using a Content Delivery Network (CDN)</h3>
+        <h2>Content Delivery Network</h2>
+        <h3>If many organizations are using the same libraries it makes sense to place them in a 
+            common location that everyone can access
+        </h3>
+        <h3>Helps to keep the size of pages small and the load times at a minimum</h3>
+        <h3>Essentially a network of servers that contain shared code libraries</h3>
+        <h3>Google provides a free CDN for a number of JavaScript libraries</h3>
+
+        <h1>Installing and using jQuery</h1>
+
+        <h2>jQuery is just one of many libraries in use but it is the most popular library which helps assist developers</h2>
+        <h3>A lightweight "write less do more" library designed to make it much easier to include
+            JavaScript on your website
+        </h3>
+        <h3>Takes many common tasks which require lines and lines of code and wraps them in 
+            methods you can call with a single line of code
+        </h3>
+        <h3>Simplifies many complicated tasks in JavaScript</h3>
+        <li>HTML/DOM maipulation</li>
+        <li>CSS maipulation</li>
+        <li>HTML event methods</li>
+        <li>Effects and animation</li>
+        <h2>jQuery syntax</h2>
+        <h3>The syntax is tailored for selecting HTML elements and then performing actions on those elements
+            $ symbol means it will be a jquery method
+        </h3>
+        <h4 style="margin: 20px;">$(selector).action()<br>
+        $(this).hide()<br>
+        $("p").hide()<br>
+        $(".test").hide()<br>
+        $("#test"),hide()</h4>
+        <h2>A common problem when programming JavaScript has to do with scripts running
+            before the page is loaded which sometimes prevents the scripts from gaining
+            access to HTML elements on the page
+        </h2>
+        <h2>jQuery has a function called ready() that is designed to take care of that in that it
+            waits for the page to be ready (all HTML elements loaded)
+        </h2>
+        <h2>Essentially you would just place the code inside the ready function</h2>
+        <h4 style="margin: 20px;">$(document).ready( function () {<br>
+        &ensp;&ensp;alert("Hello World");<br>
+        });</h4>
+
+        <h1>Modifying Web Pages Using jQuery</h1>
+
+        <h2>jQuery contains powerful methods for changing and manipulating HTML content both in content and style</h2>
+        <h2>Various DOM related methods exist within jQuery making it easy to manipulate elements and attributes</h2>
+        <h2>Primary methods</h2>
+        <h3>Text() -sets or returns the text content of the selected element<br>
+        Html() -sets or returns the content of the selected element (including HTML markup)<br>
+        Val() -sets or returns the values in form fields</h3>
+
+        <h2>Additional methods are available to add and remove content from the web page using jQuery</h2>
+        <li>Append()</li>
+        <li>Prepend()</li>
+        <li>After()</li>
+        <li>Before()</li>
+
+        <button>Start animation</button>
+        <div style="background: hotpink; height: 100px; width: 100px; position: absolute;"></div>
+
+        </script>
+    </body>
+</html>

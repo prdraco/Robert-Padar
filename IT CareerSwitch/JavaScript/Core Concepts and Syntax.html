@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Core Concepts and Syntax</title>
+    </head>
+    <body>
+        <h1>The Structure and Content</h1>
+        <h2>So everything that you do in JavaScript is case sensitive</h2>
+        <hr>
+        <li>Variables</li>
+        <li>Functions</li>
+        <li>Methods</li>
+        <li>Objects</li>
+        <h3>You name it and its case sensitive!</h3>
+        <h3>If you don't get the case right you won't see any errors, your JavaScript code will simply
+            not work
+        </h3>
+        <h2 style="text-decoration: underline;">This is the most important rule of the syntax but not the only one</h2>
+
+        <hr><h2>Parts of this JavaScriptsection in Core and Syntax</h2>
+        <li>The Structure and Content of JavaScript Code</li>
+        <li>Naming and Casing Best Practisies</li>
+        <li>Understanding Variables</li>
+        <li>Working with Operations</li>
+        <li>Working with Loops</li>
+        <li>Creating Functions</li>
+        <li>Understanding Types and Objects</li>
+
+        <h1>The Structure and Content</h1>
+        <h2>JavaScript is writen in plain text just like HTML and CSS but does follow a very
+            specific syntax which developers must learn
+        </h2>
+        <h2>JavaScript is not a compiled language but an interpreted language meaning 
+            you write the code and hand it over to the web browser and it takes care of everything:</h2>
+            <p>so no special compiler is necessary</p>
+            <p>Simple text files and a browser that has JavaScript enabled is all we need</p>
+        
+        <h2>HTML</h2>
+        <p>(p)This is a paragraph(/P)---works just fine, doesn't care about case though the 
+        preceding is sloppy and to be avoided for readability</p>
+        <h2>CSS</h2>
+        <p>Body{font-FAMILY:Arial;Font-Size: 1.2em;cOLoR:blue;}---works just fine</p>
+        <h2>JavaScript</h2>
+        <p>Alert("Hello World");-does NOT work</p>
+        <p>alert("Hello World");-does work because the alert function is declared in lowercase</p>
+
+        <h2>Syntax</h2>
+        <h3>A set of rules defining the way in which JavaScript programs are constructed</h3>
+        <h3>A computer program is simply a list of instructions to be executed</h3>
+        <p>In JavaScript these are executed by the web browser</p>
+        <p>These invidual instructions are reffered to as statements</p>
+        <p>Statements are separeted by semicolons</p>
+        <h3 style="margin: 20px;">var x = 5;</h3>
+        <h3 style="margin: 20px;">var y = 6;</h3>
+        <h3 style="margin: 20px;">var z = x + y;</h3>
+        <h3>Statements are composed of multiple elements:</h3>
+        <li>Values</li>
+        <li>Operators</li>
+        <li>Expressions</li>
+        <li>Keywords</li>
+        <li>Comments</li>
+        <h3>Two types of values exist in JavaScript statements</h3>
+        <h4>Literals-fixed values</h4>
+        <p>Numbers-written with or without decimal points and without quotes</p>
+        <p>1001</p>
+        <p>10.50</p>
+        <p>Strings-written within single or double quotes</p>
+        <p>"This is a string"</p>
+        <p>'This is also string'</p>
+        <p>"55"</p>
+        <h4>Variables-often used to store data (var x;)</h4>
+        <p>Keyword var is used to define the variable</p>
+        <p>The = sign is used to assign a value</p>
+        
+        <h3>Operators</h3>
+        <h4>Used to assign values to Variables</h4>
+        <p>Assignment operators:</p>
+        <li>=</li>
+        <h4>Use to compute values</h4>
+        <p>Arithmetic operators:</p>
+        <li>+ - * /</li>
+        <h4>Used to evaluate values</h4>
+        <p>Comparsion operators</p>
+        <li>==, !=, <, > </li>
+        
+        <h3>Expressions</h3>
+        <p>A combination of values, variables, and operation, which computes to a value</p>
+        <p>The computation is referred to as an evaluation</p>
+        <p>Expressions can also contain variables</p>
+        <li>15*10</li>
+        <li>myValue + 25</li>
+        <li>"John" + "" + "Doe"</li>
+        
+        <h3>Keywords</h3>
+        <h4>Used to identify various actions to perform:</h4>
+        <li>Var - defines a variable</li>
+        <li>For - marks a block of code to be executed so long as a condition is true</li>
+        <li>If/else - marks a block of code to be executed based on a condition</li>
+        <li>Return - exits a function</li>
+        <li>Break - terminates a switch or a loop</li>
+        <li>Function - declares a function</li>
+        <h3>None of these keywords will be allowed to be the name of a variable, object, 
+            or function that you create and ALL are care-sensitive</h3>
+        
+        <h3>Comments</h3>
+        <h4>Can be added to any code within a JavaScript program in order to assist with readability
+            and debugging</h4>
+        <h4>Single lines are commented using //</h4>
+        <li>//Here are some JavaScript comments</li>
+        <li>Should generally precede the code that you are commenting on</li>
+        <h4>Multiple lines are commented using /* these are some comments */</h4>
+        <h3>The semicolon is the separator of JavaScript statements and mot programs will include multiple lines of statements</h3>
+        <h4>The semicolon is the important part</h4>
+        <h4>It can often be omitted but it should never be just in case</h4>
+        <p style="margin: 20px;">var x = 5;</p>
+        <p style="margin: 20px;">var y = 6;</p>
+        <p style="margin: 20px;">var z = x + y;</p>
+        <p style="margin: 20px;">document.getElementById("demo").innerHTML = z;</p>
+        <h3>Whitespace doesn't matter in JavaScript just like HTML and CSS</h3>
+        <h4>Add whitespace to improve readability</h4>
+        <h4>Break long code statements over multiple lines at an operator whenever possible</h4>
+
+        <h1>Naming and Casing Best Practices</h1>
+
+        <h3>The JavaScript standard states that elements like variables and functions can contain
+            vaious object but cannot start with a number
+        </h3>
+        <h4>Letters</h4>
+        <h4>Numbers</h4>
+        <h4>Underscores</h4>
+        <h4>Dollar signs</h4>
+        <h4>Vaild names:</h4>
+        <li>Var1</li>
+        <li>My_Variable</li>
+        <li>$My_Var</li>
+        <h4>Invaild names:</h4>
+        <li>1Variable</li>
+        <li>2_Variable</li>
+        <h2>Real life JavaScriptprogramming is very visible and should follow specific naming 
+            conventions and rules
+        </h2>
+        <h3>CamelCase:</h3>
+        <h4>A typical naming convention that capital letters for the first letter in each word</h4>
+        <h4>Helps to join multiple words together without using underscores</h4>
+        <h4>Avoids the use of the (-) character which isn't allowed in many languages</h4>
+        <h4>Provides the ability to create very descriptive variable names:</h4>
+        <li>myVariable()</li>
+        <li>myFunction()</li>
+        <li>addNumbers()</li>
+        <li>modifyBodyElement()</li>
+        <li>changeCustomerInfo()</li>
+        <h3>Names for variables and functions</h3>
+        <h4>In real life JavaScript variables and functions represent very useful and needed information</h4>
+        <h4>Object should be named according to their purpose or the information that they contain
+            in a meaningful fashion</h4>
+            <p>submitButton instead of var1</p>
+            <p>infoTextBox instead of myVariable</p>
+        <h4>Always begin variable names with a lower case letter</h4>
+        <h4>Create additional words, using camel case, to further distinguish and identify different elements</h4>
+        <h4>Match the variable names with the id and class names in HTML</h4>
+        <h3>Another area where style guidelines exist is the area of spacing and indentation
+            and a few general rules exist
+        </h3>
+        <h4>Always put spaces around operators and after commas</h4>
+        <p>var x = y + z;</p>
+        <p>var values = ["Volvo", "Saab", "Fiat"];</p>
+        <h4>Always use four spaces of indentation for code blocks:</h4>
+        <p>function toCelsius(fahrenheit) {</p>
+        <p style="margin: 20px;">    return (5 / 9) * (fahrenheit - 32);</p>
+        <p>}</p>
+        <h3>While it is not required you should end all single statements with a semi-colon to prevent issues with 
+            JavaScript thinking they/re missing and adding automatically</h3>
+        <h3>Complex statements require additional considerations</h3>
+        <h4>Opening bracket goes on the end of first line</h4>
+        <h4>One space before the opening bracket</h4>
+        <h4>Closing bracket on a new line without leading spaces</h4>
+        <p style="margin: 20px;">var person = {</p>
+        <p style="margin: 30px;">firstName: "John",</p>
+        <p style="margin: 30px;">lastName: "Doe",</p>
+        <p style="margin: 30px;">age: 50,</p>
+        <p style="margin: 30px;">eyeColor: "blue"</p>
+        <p style="margin: 20px;">};</p>
+        <h3>There are conventions and rules for the various types of loops as well</h3>
+        <h3>The most common loops are "if" and "for" loops</h3>
+        <p>for (i - 0; i< 5; i++) {</p>
+            <p style="margin: 20px;">x += i;</p>
+            <p>}</p>
+            <p>if (time < 20) {</p>
+                <p style="margin: 20px;">greeting = "Good day";</p>
+                <p>} else {</p>
+                    <p style="margin: 20px;">greeting = "Good evening";</p>
+                    <p>}</p>
+
+        <h1>Understanding Variables</h1>
+        <h2>In any programming language you will frequently need to hold information for 
+            later use and that is where the variable comes in
+        </h2>
+        <h2>Variables can be defined in order to carve out a little spot of memory in order to do 
+            two things
+        </h2>
+        <h3>Hold contents for later retrieval</h3>
+        <h3>Create a unique name with which the information can be identified</h3>
+        <h2>Could be all types of information</h2>
+        <h3>Information a user inputs to a form</h3>
+        <h3>Value of an HTML element</h3>
+        <h3>Numbers, strings, and Boolean values</h3>
+        <h2>Variables are declared using the var keyword</h2>
+        <h3 style="margin: 20px;">var textInfo = document.getElelmentById("customerTextBox");</h3>
+        <h2>Technically the var keyword is optional but you should always have it there</h2>
+        <h3>You can declare the variable first and then give it a value</h3>
+        <h4 style="margin: 20px;">var carName;</h4>
+        <h4 style="margin: 30px;">carName = "Volvo";</h4>
+        <h3>Alternatively you can just do both at the same time</h3>
+        <h4 style="margin: 20px;">var carName = "Volvo";</h4>
+        <h3>It is also possible for your declarations to include multiple variables on a single
+            line or multiple lines
+        </h3>
+        <h4 style="margin: 20px;">var person = "John Doe", carNmae = "Volvo", price = 200;</h4>
+        <h4 style="margin: 20px;">var person = "John Doe",</h4>
+        <h4 style="margin: 20px;">carName = "Volvo",</h4>
+        <h4 style="margin: 20px;">price = 200;</h4>
+        <h3>In some cases we might declare a variable without a value and the variable would
+            be undefined
+        </h3>
+        <h3>At a later time, even the next line of code, we would then define the value which
+            can be of multiple types
+        </h3>
+        <h4>Numbers-define using an assignment operator and using quotes</h4>
+        <h4>Strings-define using an assignment operators and quotes</h4>
+        <h4>Boolean-defined using the true or false keywords</h4>
+        <h3>While other programming languages require you to define the type of the variable
+            along with its value JavaScript does not because it is what is called a "loosley typed language"
+        </h3>
+        <h3>Sometimes variables will need to contain multiple simultaneously which is 
+            refferred to as an array
+        </h3>
+        <h3>Arrays can be declared in various ways:</h3>
+        <h4>Longhand</h4>
+        <p style="margin: 20px;">var multiValues = [];</p>
+        <p style="margin: 20px;">var multiValues = new Array();</p>
+        <p style="margin: 20px;">var multiValues = Array();</p>
+        <p style="margin: 20px;">var multiValues = Array(5);</p>
+        <h4>Shorthand</h4>
+        <p style="margin: 20px;">var multiValues [50,60,"text", 14, "moretext"]</p>
+        <h2>Arrays are simply variables that hold multiple values with no theoretical limit to the number of values they can contain</h2>
+        <h2>You can request a specific value for display or modification using the index</h2>
+        <li>multiValues[2] = displays the value in the 3rd spot of the array because of the zero based
+            index used in numbering the items in the array
+        </li>
+        <li>multiValues[6] = "another string of the text" -would det the value to item 6 or create it if it didn't exist</li>
+        <h2>Arrays are everywhere in JavaScript!</h2>
+        <h2>Example:</h2>
+        <h3 style="margin: 20px;">var myCars = ["Volvo", "Mazda", "Nissan"];</h3>
+        <h3 style="margin: 20px;">var myCars2 = new Array("Saab", "Town and Country"];</h3>
+        <h3>console.log(myCars);</h3>
+        <h3>console.log(myCars2);</h3>
+        <h3>condole.log(myCars[2]);</h3>
+        <h3>myCars2[1] = Fiat";</h3>
+        <h3>myCars2[3] = "Ferrari"</h3>
+        <h3>myCars2.sort();</h3>
+        <h3>myCars2.join();</h3>
+        <h2>The real strenght of JavaScript arrays comes in their various properties and methods</h2>
+        <h3>Properties define information about an array such as the Lenght property</h3>
+        <h3>Methods defint executable code and functionality that belong to the array or object</h3>
+        <li>Reverse()</li>
+        <li>Join()</li>
+        <li>Sort()</li>
+
+        <h1>Working with Operators</h1>
+        
+        <h2>When working with variables we invariably work with operators as well</h2>
+        <h2>Operators are used to perform some task and come in various forms</h2>
+        <hr>
+        <h3>Arithmetic operators are used to perform arithmetic</h3>
+        <li>+-*/</li>
+        <h4 style="margin: 20px;">Add, Subtrack, multiply and divide</h4>
+        <li>% -called the modulus and used to get a remainder</li>
+        <h4 style="margin: 20px;">22 % 4 -would result in the answer 2</h4>
+        <li>Increment numbers</li>
+        <h4 style="margin: 20px;">++</h4>
+        <li>Decrement numbers</li>
+        <h4 style="margin: 20px;">--</h4>
+        <h3>Assignment operators include more than just the =</h3>
+        <li>+=</li>
+        <li>-=</li>
+        <li>*=</li>
+        <li>/=</li>
+        <h2>The + operator When dealing with strings performs a process called concatetion
+            which simply combines multiple values
+        </h2>
+        <h4 style="margin: 20px;">var playerName = "Patrick";</h4>
+        <h4 style="margin: 20px;">var playerScore = 50;</h4>
+        <h4 style="margin: 20px;">var playerRank = 1;</h4>
+        <h4 style="margin: 20px;">var msg = "Great Job" + playerName + "!" +
+        " " + "Your Score is " + playerScore + "and your rank is" + playerRank;</h4>
+        <h2>Other operators are used to compare the values of variables and are used with
+            conditional expressions
+        </h2>
+        <h3>Equality operators</h3>
+        <li>== (equals)</li>
+        <li>=== (strictly equals) like the value and the type as well (string on number)</li>
+        <li>!= (not equals)</li>
+        <li>!== (not equal value or not equal type)</li>
+        <h2>Remember that equals is ALWAYS a command not a request (=)</h2>
+        <h3 style="margin: 20px;">var a = 5;</h3>
+        <h3 style="margin: 20px;">var b = 10;</h3>
+        <h3 style="margin: 20px;">if (a == b) {</h3>
+            <h3 style="margin: 30px;">alert("The values are equal")</h3>
+            <h3 style="margin: 20px;">}</h3>
+        <h2>Conditional operators are used to complete values and are primarily used in loops
+            within JavaScript which only take an action based on a certain condition
+        </h2>
+        <li><</li>
+        <li><=</li>
+        <li>></li>
+        <li>>=</li>
+        <h2>Another way that you can cut down code from multiple if statements is to use a ternary operator</h2>
+        <h2>Uses the syntax (condition) ? True:False</h2>
+        <h3 style="margin: 20px;">var playerOne = 500;</h3>
+        <h3 style="margin: 20px;">var playerTwo = 600;</h3>
+        <h3 style="margin: 20px;">if (playerOne > playerTwo) {</h3>
+            <h3 style="margin: 30px;"> var highScore = playerOne</h3>
+            <h3 style="margin: 20px;">} else {</h3>
+                <h3 style="margin: 30px;">var highScore = playerTwo</h3>
+                <h3 style="margin: 20px;">}</h3>
+        <h3>var highScore = (playerOne > playerTwo) ? playerOne : playerTwo;</h3>
+
+        <h1>Working with Loops</h1>
+
+        <h2>Very quicly when working with progrmming you relize that there is code that 
+            you want to be repeated
+        </h2>
+        <h2>Its more efficient to tell the browser to repeat somthing by typing it once then to
+            have to retype countless time
+        </h2>
+        <h2>Looping isn't the difficult part</h2>
+        <li>For every link in the page {//do this code}</li>
+        <li>For every field in a form on the page {//do this code}</li>
+        <li>200 times {//do this code}</li>
+        <h2>Instead the difficulty is when to stop, who's keeping track?</h2>
+        <h2>One very common loop is very similar to an if statement</h2>
+        <h3 style="margin: 20px;">var a = 1;</h3>
+        <h3 style="margin: 20px;">if (a < 10) {</h3>
+            <h3 style="margin: 30px;">console.log(a)</h3>
+            <h3 style="margin: 20px;">}</h3>
+        <h2>Just replace the keyword if with while and if will loop a condition evaluates to
+            true, once it evaluates to false the loop is finished
+        </h2>
+        <h3 style="margin: 20px;">var a = 1;</h3>
+        <h3 style="margin: 20px;">while (a < 10) {</h3>
+            <h3 style="margin: 30px;">console.log(a)</h3>
+            <h3 style="margin: 20px;">}</h3>
+        <h2>Another defference with a loop is that we must have a tracking mechanism to
+            ensure the loop ends when it should and doesn't run infinitely
+        </h2>
+        <h2>This is generally achieved by incrementing the variable</h2>
+        <h3 style="margin: 20px;">var a = 1;</h3>
+        <h3 style="margin: 20px;">while (a < 10) {</h3>
+            <h3 style="margin: 30px;">console.log(a)</h3>
+            <h3 style="margin: 30px;">a++;</h3>
+            <h3 style="margin: 20px;">}</h3>
+        <h2>The For loop is probably the most common type of loop to implement in large part
+            because of the limited amount of code required for the loop 
+        </h2>
+        <h3 style="margin: 20px;">for (i = 0; i < 5; i++) {</h3>
+            <h3 style="margin: 30px;">text +="The number is " + i + "(br)";</h3>
+            <h3 style="margin: 20px;">}</h3>
+            <h2>Regardless of the type of loop there are common parts</h2>
+            <li>Set up the index</li>
+            <li>Check the condition</li>
+            <li>Increment the condition</li>
+        <h2>Normally a loop will continue until the condition of the oop no longer evaluates to
+            True but there are two exceptions using JavaScript keywords
+        </h2>
+        <h3>Break</h3>
+        <h4>A special word that jumps us out of the loop for for good</h4>
+        <h4>Not used as often with For and While loops but you might encounter it</h4>
+        <h3>Continue</h3>
+        <h4>Example on "Other Program.html"</h4>
+        <h4>A special word that jumps back to the top of the loop</h4>
+        <h4>So it stops that particulat iteration but not the loop as a whole.</h4>
+
+        <h1>Creating Functions</h1>
+
+        <h2>There are times in JavaScript as in other programming languages that you would like to 
+            bundle a set of code so that it is reusable and functions provide this capability</h2>
+        <h2>Creating functions has many advantages</h2>
+        <h3>Refer to reusable code using a user friendly name</h3>
+        <h3>Easily accept and process input parameters</h3>
+        <h3>Quickly add functionally to your website through the use of libraries</h3>
+        <h2>A function is simply a block of code designed to perform a particular task</h2>
+        <h3>A function is declared</h3>
+        <h3>Something on the page "calls" the function</h3>
+        <h2>Two basic types of functions exist</h2>
+        <h3>Anonymous functions</h3>
+        <h3>Named functions</h3>
+        <h2>Both of these are created using the JavaScript keyword function </h2>
+        <h4 style="margin: 20px;">function myFunction(p1, p2) {<br>
+        &emsp; return p1 *p2;<br>
+        }</h4>
+        <h2>Function syntax</h2>
+        <h3>Defined by the keyword function followed by a name and () or just ()</h3>
+        <h4>Names can consist of:</h4>
+        <li>Letters</li>
+        <li>Numbers</li>
+        <li>Underscores</li>
+        <li>$ signs</li>
+        <h3>Parameters</h3>
+        <h4>Names listed in the function definition between the ()</h4>
+        <h3>Arguments</h3>
+        <h4>Real values received by the function when it is invoked</h4>
+        <h4>Behave as local variables inside the function</h4>
+        <h2>The code inside a function will execute when something invokes (calls) the function</h2>
+        <h3>An event occurs - a user click a button</h3>
+        <h3>It is invoked or called within JavaScript code</h3>
+        <h3>Automatically (self-invoked)</h3>
+        <h2>The return keyword defines the value that is "returned" back to the aller causing
+            the function to stop
+        </h2>
+        <h3 style="margin: 20px;">var x = myFunction(4,3); &ensp; &ensp;//Function is called, return value will end up in x</h3>
+        <h3 style="margin: 20px;">function myFunction(a, b) { &ensp; &ensp;//Function returns the product of a and b<br>
+        &emsp;return a*b;<br>
+        }</h3>
+        <h2>Best practice is to define the function in the code before the function is called</h2>
+        <h3>Functions should be defined early in the JavaScript file</h3>
+        <h3>Functions are then called later in the file</h3>
+        <h2>Functions can be defined globally or nested within other functions</h2>
+        <h3 style="margin: 20px;">function square (x) {<br>
+        &ensp;return x * x;<br>
+        }</h3>
+        <h3 style="margin: 20px;">function lenght (x, y) {<br>
+        &ensp;function square (x) {<br>
+        &ensp;return x * x;<br>
+        &ensp;}<br>
+        }</h3>
+
+        <h1>Understanding Types and Objects</h1>
+
+        <h2>Most programming language require you to declare variables using a particular
+            type which tells the programming engine what data type to exepct
+        </h2>
+        <h2>JavaScript is different in that it is a "loosely typed" language and doesn't really care 
+        the type of object its dealing with in most cases</h2>
+        <h2>The general types that you will work with are:</h2>
+        <li>Numbers</li>
+        <li>Strings</li>
+        <li>Dates</li>
+        <li>Objects</li>
+        <h2>Nubers in JavaScript do not have the intricacies that are present in other
+            languages such as decimal, integer, large integer, floating point, etc...
+        </h2>
+        <h2>All numbers in JavaScript are assumed to be floating point integers which could 
+            cause a problem but since massive numeric calculations aren't usually performed 
+            in client-side code its not an issue
+        </h2>
+        <h4 style="margin: 20px;">var a = 1;</h4>
+        <h4 style="margin: 20px;">var b = 12.2;</h4>
+        <h4 style="margin: 20px;">var c = 12.324;</h4>
+        <h2>If you surround numbers in quotes they will no longer be treated like a number but
+            instead wil be assumed to be a string
+        </h2>
+        <h4 style="margin: 20px;">var number = 5;</h4>
+        <h4 style="margin: 20px;">var string = "5";</h4>
+        <h2>This could possibly cause an error in your code and so you can declare a value to
+            be a number using the sintax
+        </h2>
+        <h4 style="margin: 20px;">var foo = "55"&ensp;&ensp;//could be "abc"</h4>
+        <h4 style="margin: 20px;">var myNumber = number(foo);&ensp;&ensp;//make it a number</h4>
+        <h2>In addition to explicitly typing a variable you can use the built in JavaScript
+            function NaN (Is Not a Number) in order to test the value of a variable
+        </h2>
+        <h4 style="margin: 20px;">if (isNaN(myNumber)) {<br>
+        &ensp;&ensp;console.log("It's not a number");<br>
+        }</h4>
+        <h2>You can write an else statement if you actually want to check and verify that
+            something IS a number
+        </h2>
+        <h2>The Math object in JavaScript can perform some very useful operations for 
+            developers using JavaScript
+        </h2>
+        <h4 style="margin: 20px;">var x = 200.6;</h4>
+        <h4 style="margin: 20px;">var y = Math.round(x);&ensp;&ensp;//201</h4>
+        <h4 style="margin: 20px;">var a = 200, b = 10000, c = 4;</h4>
+        <h4 style="margin: 20px;">var biggest = Math.max(a,b,c);</h4>
+        <h4 style="margin: 20px;">var smallest = Math.min(a,b,c);</h4>
+        <h2>Number properties</h2>
+        <li>MAX_VALUE</li>
+        <li>MIN_VALUE</li>
+        <li>NaN</li>
+        <h2>Number methods</h2>
+        <li>toString()</li>
+        <li>toExponential</li>
+        <li>toFixed</li>
+        <h2>Strings are used for storing and manipulating text and the text can be inside single
+            quotes or double quotes but not both
+        </h2>
+        <h3>Can't start with single quotes and end with double quotes</h3>
+        <h3>Can't use the same quotes more than once inside a string</h3>
+        <h3>Can use quotes inside a string as long as they are not the same as the outside quotes</h3>
+        <h4 style="margin: 20px;">var answer = "It's alright";</h4>
+        <h4 style="margin: 20px;">var answer = "He is called 'Johnny'";</h4>
+        <h4 style="margin: 20px;">var answer = 'He is called "Johnny"';</h4>
+        <h2>When you have a situation where you need to include special characters (like quotes)
+            inside of a string value you have two options:
+        </h2>
+        <h3>Change the quotes i.e. single quotes inside of double quotes</h3>
+        <h3>Escape the special characters using the \ character</h3>
+        <h4 style="margin: 20px;">var y = "We are the so-called "Vikings" from the north."&ensp;&ensp;-wrong</h4>
+        <h4 style="margin: 20px;">var x = 'It\'s alright';</h4>
+        <h4 style="margin: 20px;">var y = "We are the so-called \"Vikings\" from the north."</h4>
+        <h2>String Properties:</h2>
+        <h3>Length-the primary property that you will use which simply returns the length of the string</h3>
+        <h2>String Methods:</h2>
+        <li>charAt()</li>
+        <li>Match()</li>
+        <li>Replace()</li>
+        <li>Search()</li>
+        <li>Slice()</li>
+        <li>toLowerCase()</li>
+        <li>Trim()</li>
+        <li>toUpperCase()</li>
+        <h2>The Date objects allows you to work with dates:</h2>
+        <li>Years</li>
+        <li>Months</li>
+        <li>Days</li>
+        <li>Hours</li>
+        <li>Minutes</li>
+        <li>Seconds</li>
+        <li>Milliseconds</li>
+        <h2>Can be written as a srtring "Tue Dec 15 15:32:52 GMT-0500 (EST)</h2>
+        <h2>Can be written as a number 1450211572636</h2>
+        <h2>Initiating a date can happen in different ways</h2>
+        <h4 style="margin: 20px;">new Date()</h4>
+        <h4 style="margin: 20px;">new Date(milliseconds)</h4>
+        <h4 style="margin: 20px;">new Date(dateString)</h4>
+        <h4 style="margin: 20px;">new Date(year, month, day, hours, minutes, seconds, milliseconds</h4>
+        <h2>By default creates a new date object with the current date and time but using other
+            mechanisms you can choose a specified date and time
+        </h2>
+        <h2>Once the date object is created there are various methods that allow you to operate on it</h2>
+        <h3>Get and set the year, month, day, hour, ect...</h3>
+        <h3>Display the date in different formats</h3>
+        <h2>Methods include</h2>
+        <li>getDate() - get the day as a number</li>
+        <li>getDay() - get the weekday as a number\</li>
+        <li>getFullYear() - get the for digit year</li>
+        <li>getHours() - get the hours</li>
+        <li>getMinutes() - get the minutes</li>
+        <h2>Object in JavaScript are everywhere, if you understand objects then you
+            understand JavaScript
+        </h2>
+        <h2>Objective have properties (attributes) and methods (actions)</h2>
+        <h2>Consider a real life object like a pizza</h2>
+        <h3>All pizza objects have properties:</h3>
+        <li>Toppings</li>
+        <li>Crust</li>
+        <li>Size</li>
+        <li>Ect...</li>
+        <h3>They have methods associated with them as well</h3>
+        <li>Freeze</li>
+        <li>Cook</li>
+        <li>Prepare</li>
+        <h2>Nearly everything in JavaScript is an object</h2>
+        <h3>Booleans can be objects<br>
+        Numbers can be objects<br>
+        Strings can be objects<br>
+        Dates are always objects<br>
+        Maths are always objects<br>
+        Regular expressions are always objects<br>
+        Arrays are always objects<br>
+        Functions are always objects<br>
+        Objects are objects</h3>
+        <h2>Basically everything except for primitive values are objects but even those can be
+            created as objects
+        </h2>
+        <h2>Objects are simply variables containing variables</h2>
+        <h3>Variables can only contain a single value</h3>
+        <h3>Objects can contain multiple values in name:value pairs</h3>
+        <h4 style="margin: 20px;">var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</h4>
+        <h3>The name:value pairs are referred to as properties</h3>
+        <h3>Methods are actions that can be performed on objects</h3>
+        <h4>An object property that contains a function definition</h4>
+        <h2>You can create JavaScript objects in various ways</h2>
+        <h3>Define and create a single object using an object literal</h3>
+        <h3>Define and create a single object using the keyword new</h3>
+        <h3>Define an object constructor and then create object of the constructed type</h3>
+        <h2>Creating a single object using an object literal is the easiest wayto create a
+            JavaScript object
+        </h2>
+        <h3>You both define and create the object in a single statement</h3>
+        <h3>Uses a list of name:value pairs inside {}</h3>
+        <h4 style="margin: 20px;">var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</h4>
+        <h4 style="margin: 20px;">var person = {<br>
+            &ensp; firstName:"John",<br> 
+            &ensp; lastName:"Doe", <br>
+            &ensp; age:50, <br>
+            &ensp; eyeColor:"blue"<br>
+        };</h4>
+        <h2>The 2nd option is use the NEW keyword to create an object though this is
+            deemed unnecessary
+        </h2>
+        <h4 style="margin: 20px;">var person = new Object();<br>
+        person.firstName = "John";<br>
+        person.lastName = "Doe";<br>
+        person.age = 50;<br>
+        person.eyeColor = "blue";</h4>
+        <h2>The previous methods for creating objects are limited to creating a single object</h2>
+        <h2>There are times when you would like to create an object "type" that can then be
+            reused to create multiple objects of a single type
+        </h2>
+        <h2>The way to achieve this is to use 3rd option of creating objects by using an
+            object constructor function
+        </h2>
+        <h4 style="margin: 20px;">function person(first, last, age, eye) {<br>
+        &ensp;this.firstName = first;<br>
+        &ensp;this.lastName = last;<br>
+        &ensp;this.age = age;<br>
+        &ensp;this.eyeColor = eye;<br>
+        }</h4>
+        <h4 style="margin: 20px;">var myFather = new person("John", "Doe", 50, "blue");</h4>
+        <h4 style="margin: 20px;">var myMother = new person("Sally", "Rally", 48, "blue");</h4>
+        <h2>The properties are the most important parts of an object</h2>
+        <h3>They are the values associated with an object</h3>
+        <h3>A collection of unordered properties</h3>
+        <h3>Can usually be added, changed, and deleted though some are read-only</h3>
+        <h2>Syntax</h2>
+        <h3>objectName.property-person.firstName</h3>
+        <h4 style="margin: 20px;">person.firstname + "is " + person.age + " years old."</h4>
+        <h3>objectName["property"]-person["firstName"]</h3>
+        <h4 style="margin: 20px;">person["firstname"] + " is " + person["age"] + " years old.";</h4>
+
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Web Page</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#btn1").click(function () {
+                    alert("Text: " +$("#test").html()) 
+                });
+                $("#btn2").click(function () {
+                    alert("HTML: " +$("#test").html())
+                });
+            });
+        </script>
+        <style>
+            h1 + p {
+                background-color: rgb(255, 251, 0);
+            }
+            a[data-filetype~="image"] {
+                color: white;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Web Page</h1>
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Try It</button>
+        <script src="script1.js"></script>
+    </body>
+    <script>
+        var i =0;
+        var text = "";
+        for (i=0; i<10; i++) {
+            if (i===6) {continue;}
+            text += "The number is " +i+ "<br>";
+        }
+        var d = new Date();
+    </script>
+    <body>
+        <p id="demo2">An other Paragraph</p>
+        <button type="button" onclick="document.getElementById('demo2').innerHTML = text">Try It</button>
+        
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: cadetblue;width: 120px;height: 20px;padding: 40px;margin: 40px;">Mouse Over Me</div>
+        <script>
+            function mOver(obj) {
+                obj.innerHTML = "Thank You"
+            }
+            function mOut(obj) {
+                obj.innerHTML = "Mouse Over Me"
+            }
+        </script>
+        <p>Just an Example to the <mark>Mark</mark> function.</p>
+
+        <p id="test">This is some <b>bold</b> test in a paragraph.</p>
+
+        <button id="btn1">Show text</button>
+        <button id="btn2">Show HTML</button>
+
+       <script>
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+            function appendText() {
+	            var txt1 = "<p>This is text along with html markup</p>"; //Create text with HTML
+	            var txt2 = $("<p></p>").text("This is text."); //Create text with jQuery
+	            var txt3 = document.createElement("p");
+	            txt3.innerHTML = "Text xreated using the DOM"; //Create text with the DOM
+                $("#body").append(txt1, txt2, txt3); //Append new elements
+            }
+        </script> 
+        <p id="body"></p>
+        <script>
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+            $(document).ready(function() {
+                $("#imp").click(function() {
+                    $("div").animate({left: '250px'});
+                });
+            });
+        </script>
+        <button onclick="appendText()">Append text</button>
+        
+        <button id="imp" type="button">Start animation</button>
+        <br><br>
+        <div style="background: hotpink; height: 100px; width: 100px; position: absolute;"></div>
+        
+        <br><br><br><br><br><br>
+
+        <script>
+            var person= "alex";
+            document.getElementById("samp").innerHTML =
+            typeof "john" + <br/> +
+            typeof 3.14159265 + <br/> +
+            typeof false + <br/> +
+            typeof [1,2,3,4] + <br/> +
+            typeof (name= 'john', age= 18) + <br/> +
+            typeof person;
+        </script>
+        <br><br>
+       
+        <p id="example">Please Locate where 'locate' occurs in this sentence!</p>
+
+        <button onclick="FindStr()">Click me to find the string</button>
+        <p id="results"></p>
+
+        <script>
+            function FindStr() {
+                var str = document.getElementById("example").innerHTML;
+                var pos = str.indexOf("locate");
+                document.getElementById("results").innerHTML = pos;
+            }
+        </script>
+        <p id="samp1"></p>
+        <script>
+            var d = new Date(); //init date to a var called d .. EPOCH (zero time) 1/1/70
+            document.getElementById("samp1").innerHTML = d.getMilliseconds();
+        </script>
+        <br>
+
+        <h1>Date Methods</h1>
+
+        <p id="semp"></p>
+        <script>
+            var today = new Date(); //today's date
+            var someDate = new Date(); //some date
+            someDate.setFullYear(2021,0,1); //set the somedate full year for the compare
+            if (someDate > today) {
+                text2 = "today is before Jan 01 2021"
+            } else {
+                text2 = "today is after Jan 01 2021"
+            }
+            document.getElementById("semp").innerHTML = text2;
+        </script>
+
+        <h1>Array Methods</h1>
+
+        <p id="sami">Are in the Array</p>
+        <p id="sami1">elements have in the Array</p>
+        <p id="sami2"></p>
+        <p id="sami3"></p>
+        <p id="sami4"></p>
+        <script>
+            var fruits = ["banana", " orange", " apple", " melon "]; //array of fruits
+            document.getElementById("sami").innerHTML = fruits; //simple array print out 
+            document.getElementById("sami1").innerHTML = fruits.length; //print out how many elements in the Array
+            fruits.shift(); //move all of the elements to the 'left'  and drop (delete) the first element from the list
+            document.getElementById("sami2").innerHTML = fruits; //simple array print out 
+            fruits[0] = "banana"
+            document.getElementById("sami3").innerHTML = fruits; //simple array print out 
+            fruits.splice(2,0," lemon"," kiwi") //adding to the middle of the array
+            document.getElementById("sami4").innerHTML = fruits; //simple array print out 
+        </script>
+
+        <h1>Loop Methods</h1>
+        
+        <p id="sam"></p>
+        <script>
+            var startAt = 0;
+            var endAt = fruits.length;
+            while (startAt < endAt) {
+                status +=" " + fruits[startAt] + "<br/>";
+                startAt++;
+            }
+            document.getElementById("sam").innerHTML = status;
+        </script>
+
+        <a href="images/check.gif" data-filetype="image">checked</a>
+
+        <script>
+            $(document).ready(function() {
+                $("#name").click(function() {
+                     $("#dor1").fadeIn();
+                     $("#dor2").fadeIn("slow");
+                     $("#dor3").fadeIn(3000);
+                });
+            });
+        </script>
+        <p>Demonstrate "fadeIn()" with different parameters</p>
+
+        <div id="dor1" style="width: 80px; height: 80px; display: none; background-color: red;"></div><br>
+        <div id="dor2" style="width: 80px; height: 80px; display: none; background-color: blue;"></div><br>
+        <div id="dor3" style="width: 80px; height: 80px; display: none; background-color: violet;"></div><br>
+        <button id="name">Click fade the boxes</button>
+    </body>
+</html>

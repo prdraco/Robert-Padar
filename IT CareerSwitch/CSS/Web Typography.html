@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="normalize.css">
+</head>
+<article>
+    <header> <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+    }
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    h3 {
+        margin: 2em;
+    }
+    
+    .shadowfilter {
+        margin: 12cm;
+        font-size: 2em;
+        text-shadow: 0px 3px 0px #8fa5a2, 0px 7px 5px rgba(0,0,0,0.15),
+        0px 12px 1px rgba(0,0,0,0.1), 0px 17px 17px rgba(0,0,0,1);
+    }
+    </style>
+    </header>
+    <h1 style="color: lightblue;"
+    style="text-shadow: 2px 2px 4px black;">Web Typography</h1>
+      
+    <b style="color: crimson;">Posted by Robert Padar</b>
+      
+    <p style="text-align: center;">   
+        - Understanding Fonts
+        - Working With Text Properties
+        - Text and Shadow Effects part1
+        - Text and Shadow Effects part2
+
+    <h1>Understanding Fonts</h1>
+    
+    <h3> A font is a set of characters that share a similar design:</h3>
+    <p>     -Times New Roman</p>
+    <p>     -Arial</p>
+    <p>     -Verdana</p>
+    <p>     -Comic Sans</p>
+    <h3> Font properties in CSS are used to format the appearance of words and text on a page</h3>
+    <h3> The font property is concerned with how the characters look while the text property is concerned with everything else</h3>
+    <h3> Font families define the three major categories of font types with two additional types:</h3>
+    <p>     -Serif</p>
+    <p>     -San serif</p>
+    <p>     -Monospace</p>
+    <p>     -Cursive</p>
+    <p>     -Fantasy</p>
+    <h3> When specifying the font-family you should always specify multiple fonts in case the user does not have the font you specify</h3>
+    <h3> The font-size property sets the size of the text and can be set in multiple ways:</h3>
+    <p>     -Pixels (px)</p>
+    <p>     -Em</p>
+    <p>     -Percentage (%)</p>
+    <p>     -Keywords</p>
+    <h3> Examples:</h3>
+    <p>     -Font-size: 20px;</p>
+    <p>     -Font-size: 1.5em</p>
+    <p>     -Font-size: 150%;</p>
+    <p>     -Font-size: large</p>
+    
+    <h3> Font-style property - used to specify different styles:</h3>
+    <p>     -Normal</p>
+    <p>     -Italic</p>
+    <p>     -Oblique</p>
+    <h3> Font-weight property - used to specify bold text and works as the counterpart to font-style:</h3>
+    <p>     -Normal, bold, or bolder (some browsers may not support bolder)</p>
+    <p>     -Numbers 100-900 (above 600 is considered bold</p>
+
+    <h1>Working With Text Properties</h1>
+    
+    <h3> CSS text properties allow you to set properties that aren't realated to the front of the text:</h3>
+    <p>     -Text color</p>
+    <p>     -Text alignment</p>
+    <p>     -Text decoration</p>
+    <p>     -Letter spacing</p>
+    <p>     -Word spacing</p>
+    <p>     -Line height</p>
+    <h3> The text-alignment property is used to specify how text should be aligned within an element on the page:</h3>
+    <p>     -Left</p>
+    <p>     -Right</p>
+    <p>     -Centered</p>
+    <p>     -Justified:</p>
+    <p>         -Text-align:center</p>
+    <p>         -Text-align:left</p>
+    <p>     -Left alignment is the default</p>
+    <h3> The text-decoration property is mainly used to specify whether or not text should be underlined though multiple values are possible for the property:</h3>
+    <p>     -None - default</p>
+    <p>     -Underline</p>
+    <p>     -Overline</p>
+    <p>     -Line-through</p>
+    <h3> This is most commonly used to remove underlines from hyperlinks which will occur by default in most browsres</h3>
+    <p>     Text-decoration:none;</p>
+    <h3> Letter spacing is used to increase or decrease the spacing between letters in a word</h3>
+    <h3> The amount of spacing is specified in pixels:</h3>
+    <p>     -To increase space use a positive value</p>
+    <p>     -To decrease space use a negative value:</p>
+    <p>         -Letter-spacing: 2px;</p>
+    <h3> Word spacing is used to increase or decrease the spacing between the actual words in a block of text:</h3>
+    <p>     -Similar in function to letter-spacing</p>
+    <p>     -Positive values increase space and negative values decrease space:</p>
+    <p>         -Word-spacing: 2px;</p>
+    <h3> Line height is used to set the spacing between each line of text</h3>
+    <h3> Can be set using multiple values:</h3>
+    <p>     -Number</p>
+    <p>     -Specific length</p>
+    <p>     -Percentage:</p>
+    <p>         -Line-height: 20px;</p>
+    <p>         -Line-height: 120%</p>
+    
+    <h1> Text and Shadow Effects</h1>
+    
+    <h3> CSS3 contains many new properties to style, alter, customize, tweak, and enhance text on the page</h3>
+    <h3> As a result of these new properies the use of images to achieve desired text effects is greatly reduced and this has a positive effect on page load time and other advantages:</h3>
+    <p>     -Text takes up less storage space and downloads faster</p>
+    <p>     -Screen readers and other types of alternative browsers can read text but not images</p>
+    <p>     -Search engines and read and index text</p>
+    <h3> Shadows are a great tool for adding an illusion of depht to a web page</h3>
+    <h3> CSS3 provides two properties that can be used to create shadows:</h3>
+    <p>     -Text-shadow</p>
+    <p>     -Box-shadow</p>
+    <h3> By applying shadows in different ways you can create many types of effects:</h3>
+    <p>     -Drop shadows</p>
+    <p>     -Letterpress text</p>
+    <p>     -3D text</p>
+    <h3> Text-shadow - property used to create text shadows</h3>
+    <h3> At its simplest:</h3>
+    <p>     -Text-shadow: offset-x offset-y color</p>
+    <p>     -H1 {text-shadow: 0.1em 0.1em #aaaaaa;}</p>
+    <h3> An additional optional parameter is the blur-radius which is used to make the shadow fuzzy and lighter</h3>
+    <p>     The larger the value the larger and lighter the blur will be</p>
+    <h3> The box-shadow is used to create one or more shadows for an element and has a similar syntax:</h3>
+    <p>     -Box-shadow offset-x offset-y color</p>
+    <p>     -Box-shadow: 4px 4px #777777;</p>
+    <h3> Inset text is text that appears to recede into the background</h3>
+    <p>     The key is to use a text shadow that's lighter than the text background color causing the text to look like it's inset and a shadow is being cast inside the letters</p>
+    <p>     The lighter shadow and darker background makes the text look inset</p>
+    <h3> Creating 3D text is the opposite of inset text in which the text appears to protrude from the page</h3>
+    <p>     The key is to use multiple tex shadows together along with another CSS3 trick which is opacity</p>
+    <p>     It can get comlicated but the effect is fantastic!</p>
+    
+    <r class="shadowfilter">Just to show this special text-shadow effect</r>
+    
+    <h3> You can also use transparency along with a new property called background-clip to do a much more realistic inset otherwise known as a letterpress effect</h3>
+    <p>     The most common use of the background-clip property is to add a background image to text which creates some stunning effects</p>
+    <p>     This property specifies whether the background extends under the border of the object</p>
+
+
+</article>
+</html>

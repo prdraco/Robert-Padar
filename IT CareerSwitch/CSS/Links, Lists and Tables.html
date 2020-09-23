@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="normalize.css">
+</head>
+<article>
+    <header> <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+    }
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    h3 {
+        margin: 2em;
+    }
+    ul, li {
+        list-style-type: square;
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+    }
+    .shadowfilter {
+        margin: 12cm;
+        font-size: 2em;
+        text-shadow: 0px 3px 0px #8fa5a2, 0px 7px 5px rgba(0,0,0,0.15),
+        0px 12px 1px rgba(0,0,0,0.1), 0px 17px 17px rgba(0,0,0,1);
+    }
+    </style>
+    </header>
+    <body>
+    <h1 style="color: lightblue;"
+    style="text-shadow: 2px 2px 4px black;">Links, Lists and Tables</h1>
+      
+    <b style="color: crimson;">Posted by Robert Padar</b>
+      
+    <p style="text-align: center;">   
+        - Working With Lists
+        - Using Navigation Bars
+        - Working With Tables Part1
+        - Working With Tables Part2
+
+    <h1>Working With Lists</h1>
+    <h3> Lists are powerful tools used to group together similar elements and give site visitors an easy way to view groups of information</h3>
+    <p>     Also to demonstare how we have to code lists in other list</p>
+    <ol style="margin: 2em;">
+    <li>     Lists can be created for just about any type of content</li>
+    <li>     Lists use at least two components:</li>
+    <ul>
+    <li>        -A markup element that tells the browser a list is on the way</li>
+    <li>         -A markup element that tells the browser this particular item goes into a list</li>
+    </ul>
+    <li>     Three types of lists:</li>
+    <ul>
+    <li>         -Ordered lists</li>
+    <li>         -Unordered lists</li>
+    <li>         -Definition lists</li>
+    </ul>
+    <li>     All list types can be styled using CSS3</p>
+    </ol>  
+    
+    <h3> The method for styling list is the list-style-type property which allows you to set the item markers for your list</h3>
+    <p>     Item markers refer to the characters which are used to delineate list items</p>
+    <p>     Bullets for an unordered list by default</p>
+    <p>     Numbers for an ordered list by default</p>
+    
+    <section>
+    <h3> Using the list-style property for ordered list can select the following values:</h3>
+    <p>     Also to demonstare how we have to use lists in code</p>
+    <ul style="margin: 2em;">
+        <li>Lower-roman - (i, ii, iii)</li>
+        <li>Upper-roman - (I, II, II)</li>
+        <li>Decimal - default</li>
+        <li>Decimal-leading-zero - the number with a leading zero</li>
+        <li>Lower-alpha</li>
+        <li>Lower-greek</li>
+        <li>Upper-alpha</li>
+    </ul>
+    </section>
+    
+    <h3> Using the list-style-type property for unordered lists allows you to specify the particular shape or symbol that you want to use as a bullet</h3>
+    <p>     The default marker is a disc (filled circle)</p>
+    <p>     Other options:</p>
+    <p>         -Square</p>
+    <p>         -Circle</p>
+    <h3> In addition you can disable the marker entirely using the list-style-type property with a value of none</h3>
+    <h3> An additional option if you do not desire any of the additional list markers is to use an image of your own as the marker</h3>
+    <h3> You can use the list-style-image property to specify the url of the image that you would like to use:</h3>
+    <p>     list-style-image: url('myBullet.gif');</p>
+    <h3> The list-style-position property is used to specify whether the list item markers should appear inside or outside the content flow:</h3>
+    <p>     -Two values are "inside" and "outside"</p>
+    <h3> By default list items are outside and there is a certain amount of indentation</h3>
+    <h3> If this is modified and set to inside the item markers are displayed after the indentation which simply results in more indentation</h3>
+
+    <h1>Using Navigation Bars</h1>
+
+    <h3> Navigation bars are commonly created as a combination of lists and links and are used to navigate to different areas of a specific website</h3>
+    <h3> The invidual items in a navigation bar are simply hyperlinks that use a relative link</h3>
+    <h3> Links can be styled using all of the styles discussed thus far:</h3>
+    <p>     -Colors</p>
+    <p>     -Backgrounds</p>
+    <p>     -Pseudo classes</p>
+    <h3> The first step to creating a navigation bar is to create an unordered list of items for the menu and make those items hyperlinks to other pages</h3>
+    <h3> Typically you would then use the list-style-type: none; declaration to remove the default bullet points</h3>
+    <h3> Next you would style the bullet points</h3>
+    <h3> Then style the hyperlinks</h3>
+    <h3> Finally for horizontal navigation bars you would use the float:left property</h3>
+    
+    <h3>Example:</h3>
+
+    <head>
+    <style>
+        a.navBarList {
+            background-color: seagreen;
+            display: block;
+            width: 160px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .clearFloat {
+            clear: both;
+        }
+    </style>
+    </head>
+    <body>
+    <header>
+    <nav>
+        <ul>
+            <li style="float: left;"><a href="HomePage.html" class="navBarList">Home
+            </a></li>
+            <li style="float: left;"><a href="Intro HTML.html" class="navBarList">Intro to HTML
+            </a></li>
+            <li style="float: left;"><a href="Intro CSS.html" class="navBarList">Intro to CSS
+            </a></li>
+            <li style="float: left;"><a href="Intro JavaScript.html" class="navBarList">Intro to JavaScript
+            </a></li>
+
+        </ul>
+        <h3 class="clearFloat">Navigation Bar</h3>
+    </nav>
+    </header>
+
+    </body>
+    <h1>Working With Tables</h1>
+    <h3>HTML tables are a great way to arrange items in a gird format when it makes sense to do so but they aren't very attractive by default</h3>
+    <h3>Limited styling exists within HTML for tables and shouldn't be used anyway but CSS is very capable of creating good looking tables</h3>
+    <h3>The first set of properties to consider:</h3>
+    <p>     -Borders</p>
+    <p>     -Padding</p>
+    <p>     -Margins</p>
+    <h3>Tables and table cells follow the same CSS box model as other elements and thus can be styled using those properties</h3>
+    
+
+    <style>
+        img{
+            margin: 20px;
+            object-position: 0px;
+            float: right;
+            width: 700px;
+            height: 320px;
+        }
+    </style>
+
+    <img src="table.png" alt="table">
+    <h3>Tables are defined using (table)</h3>
+    <h3>Rows are defined with (tr)</h3>
+    <h3>Heading (th)</h3>
+    <h3>Individual cells (td)</h3>
+    <h3>Margins are ignored for (th) and (td):</h3>
+    <p>     -Cannot specify spacing between cells</p>
+    <p>     -A small gap exists by default</p>
+    <p>     -Use border-collapse:collapse on (table) to create only a single border</p>
+
+    <h3 class="clearFloat"></h3>
+
+    <h1>Tables in HTML are Great</h1>
+
+    <style>
+        td{
+            vertical-align: middle;
+            color: cornsilk;
+            height: 40px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        table {
+            box-shadow: 0.2em 0.2em lightslategray;
+            background-color: rgb(61, 167, 61);
+            position: static;
+            background-position-x: 100px;
+            padding: 10px;
+            margin: 60px;
+            width: 80%;
+            height: 400px;
+            border-collapse: initial;
+        }
+        th {
+            font-style: oblique;
+            text-decoration: lightgray;
+        }
+        tr:nth-child(even) {
+            background-color: lightgreen;
+        }
+        tr:nth-child(odd) {
+            background-color: darkgreen;
+            color: white;
+        }
+        #special {
+            color: rgb(109, 29, 106);
+            background-color: orangered;
+        }
+    </style>
+
+    <table border="1">
+        <tr><td>First name</td><td>Last name</td><td>Age</td></tr>
+        <tr><th>Patric</th><th>Loner</th><th>38</th></tr>
+        <tr><th>Donald</th><th>Clark</th><th>41</th></tr>
+        <tr><th>Alicia</th><th>Lambert</th><th id="special">27</th></tr>
+        <tr><th>Peter</th><th>Patric</th><th>14</th></tr>
+
+    </table>
+    <h3>The width and height of the table can be configured using those properties:</h3>
+    <p>     -Values are given using pixels or percentages</p>
+    <p>     -Table {width: 100%; height: 500px}</p>
+    <p>     -These values can also be set for (tr), (th) or(td)</p>
+    <p>     -You can set the width property for the invidual table cells represented by the (th) or (td) elements</p>
+    <p>     -Classes and IDs can be used in order to apply special styling to invidual cells or to groups of cells:</p>
+    <p>         -(td class="FirstColumn")FirstName</p>
+
+    <h3>Text within the tables is able to be aligned eighter horizontally or vertically</h3>
+    <p> Horizontal alignment is achieved using the text-align property:</p>
+    <p>     -Center</p>
+    <p>     -Left</p>
+    <p>     -Right</p>
+    <p>     -Justify</p>
+    <p> Vertical alignment is achieved using the vertical-align property:</p>
+    <p>     -Top</p>
+    <p>     -Middle</p>
+    <p>     -Bottom</p>
+    
+    <h3>The tables can also be styled using properties for background, font and text just like other elements on the web page:</h3>
+    <p>     -Color</p>
+    <p>     -Background-color</p>
+    <h3>In additional a special selector can be helpful when dealing with larger tables that are harder to read:</h3>
+    <p>     -One option is to color alternating rows</p>
+    <p>     -Easily achived using the nth-child selector</p>
+
+
+</body>
+</article>
+</html>

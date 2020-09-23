@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Basic HTML Page</title>
+        <style>
+            body {
+                background: beige;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: black;
+                width: 70%;
+                margin: 0px auto;
+                border: 2px solid black;
+                padding: 10px;
+                margin-top: 20px;
+            }
+            .example {
+                text-align: right;
+                color: blue;
+                font-size: 1.2em;
+                font-style: oblique;
+            }
+            html {
+                background: gray;
+            }
+        </style>
+        <script type="text/javascript">
+            //JavaScript goes here
+            //alert("Hello World I am a JavaScript Alert")
+            function preparePage () {
+                document.getElementById("mainBody").onclick = function () {
+                if (document.getElementById("mainBody").className == "example") {
+                    document.getElementById("mainBody").className = "";
+                } else {
+                    document.getElementById("mainBody").className = "example";
+                }
+                };
+            }
+            window.onload = function () {
+                preparePage();
+            }
+            var doc = document.getElementById("mainBody");
+            doc.style.fontFamily = "Times New Roman";
+        </script>
+    </head>
+    <body id="mainBody" class="example">
+        <h1>This is a Basic HTML Page</h1>
+        <p>It really doesn't get more basic than this. HTML is a language that will
+            control the structure and content of the information on your web page.
+            Other technologies will control style, like CSS, and interactivity, like 
+            JavaScript. HTML is the most improtent of all because without HTML you would have nothing...
+        </p>
+        <div class="listContainer">
+            <h2>Things you need for a web page</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </body>
+</html>

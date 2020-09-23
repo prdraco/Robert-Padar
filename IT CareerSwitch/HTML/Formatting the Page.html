@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        header li {
+            font-size: 1.5em;
+        }
+    </style>
+    </head>
+    <header>
+        <h1>Formatting the Page</h1>
+        <li>Using Headings</li>
+        <li>Creating Paragraphs</li>
+        <li>Emphasizing Text</li>
+        <li>Controlling Line Breaks and Whitespace</li>
+        <li>Creating Lists</li>
+        <li>Working with Tavles</li>
+    </header>
+    <body>
+        <h1>Using Headings</h1>
+
+        <h2>Heading elements implement six levels of document heading</h2>
+        <h3>(h1) is the greatest</h3>
+        <h3>(h6) is the least</h3>
+        <h2>Used to briefly describe the content of the section it introduces</h2>
+        <h2>May be used by agents to construct an outline for the document automatically</h2>
+        <h2>Cautions</h2>
+        <h3>Do not use headings to decrease font size</h3>
+        <h3>Only use headings when there is semantic meaning, remember that HTML should be
+            used to define the content not to style it
+        </h3>
+        <h3>Avoid skipping headings</h3>
+        <h2>Best Practices</h2>
+        <h3>Use (header) and (hgroup) elements to further structure the content</h3>
+
+        <h1>Creating Paragraphs</h1>
+
+        <h2>Paragraphs are the most basic element in a HTML document</h2>
+        <h3>Define a paragraph of related text</h3>
+        <h4>(p)This is a very short paragraph. It only has two sentences.(/p)</h4>
+        <h3>Block level elements</h3>
+        <h3>A paragraph can contain any amount of text, from a single character to thousands of words, 
+            but is typically used in the standard literary sense to contain one to a few sentences.</h3>
+        <h3>There is no need to overuse (p); if the content is actually a list, heading, link 
+            or other specific type of content, there are many suitable elements available</h3>
+        
+        <h1>Emphasizing Text</h1>
+
+        <h2>HTML contains four elements that are used to emphasize cretain bits of text
+            as a way of differentiating it from its surrounding content
+        </h2>
+        <h3>Normally means a change in font style for most browsers such as bold or italics</h3>
+        <h3>Screen readers will interpret this and result in a change in voice</h3>
+        <h2>Elements</h2>
+        <h3>(em)</h3>
+        <h3>(i)</h3>
+        <h3>(strong)</h3>
+        <h3>(b)</h3>
+        
+        <h2>The (em) element:</h2>
+        <h3>Marks text that has a stressed emphasis</h3>
+        <h3>This emphasis would subtly change the meaning of the sentence</h3>
+        <h4>(p)(em)Please(/em) remember to unplug the kettle at night.(p)</h4>
+        <h3>Do not use for presentational purposes but only when additional emphasis is needed</h3>
+        
+        <h2>The (i) element:</h2>
+        <h3>Used to simply mean Italics and was considered a presentational attribute in HTML4 and 
+            its use frowned upon
+        </h3>
+        <h3>Has been redefined in HTML5 and does have vaild uses</h3>
+        <h4>Represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose</h4>
+        <h4>Use with:</h4>
+        <li>Technical terms</li>
+        <li>Idiomatic phrases from othe languages</li>
+        <li>Names of books or ships</li>
+        <li>Other prose where it is common to italicize but no additional emphasis is required</li>
+        <h4>(p)As we sailed into port, we spied the (i)Black Pearl(/i) moored at the dock.(/p)</h4>
+        <h4>(p)She really does add that little bit of (i lang="fr")je ne sais quoi(/i).(/p)</h4>
+        <h3>Its common that these two elements are confusing because they appear to
+            produce the exact same result - text that is italicized
+        </h3>
+        <h4>The visual result is indeed the same</h4>
+        <h4>The semantic result is different</h4>
+        <h3>Use (em) when you really require additional emphasis placed on the content
+            contained inside the (em) tags
+        </h3>
+        <h3>Use (i) when no emphasis is required</h3>
+        
+        <h2>The (strong) element</h2>
+        <h3>The (strong) element is used to mark importance, seriousness, or urgency of
+            particular text in comparsion with the text around it
+        </h3>
+        <h4>Most browsers will render (strong) as bolded text</h4>
+        <h4>As with other emphasis markers do not use as a formatting tool but only when applicable</h4>
+        <h4>(p)There are twenty different species living inside this enclosure.</h4>
+        <h4>(strong)Warning! Do not feed them: they will eat your shoes.(/strong)(/p)</h4>
+
+        <h2>The (b) element</h2>
+        <h3>The bold element (b) is used to simply instuct the browser to display the inline text as bold</h3>
+        <h3>The use of this element was frowned upon due to its presentational nature</h3>
+        <h3>HTML5 has redefined (b)</h3>
+        <h4>Identifies content that is stylistically offset from the rest of the text, but no more important in ter</h4>
+        <h4>(p)In this article, Chris Mills show you how to combine (b)HTML5(/b),
+            (b)CSS3(/b), (b)coloured card(/b), and (b)string(/b) to create an attractive mobile
+            for your child's bedroom.(/p)ms of its meaning</h4>
+        
+        <h1>Controlling Line Breaks and Whitespace</h1>
+
+        <h2>Use command like &ensp for whitespace</h2>
+        <h2>Use (br) for line brakes</h2>
+        <h2>and (pre)(/pre) tags for print text out exactly in the code</h2>
+
+        <h1>Creating Lists</h1>
+
+        <h2>Lists are powerful tools used to group together similar elements and give site 
+            visitors an easy way to view groups of information
+        </h2>
+        <h3>Lists can be created for just about any type of content</h3>
+        <h3>Lists use at least two components</h3>
+        <h4>A markup element that tells the browser a list is on the way</h4>
+        <h4>A markup element that tells the browser this particular items goes into a list</h4>
+        <h3>Three types of lists:</h3>
+        <li>Ordered lists</li>
+        <li>Unordered lists</li>
+        <li>Definition lists</li>
+        <h2>Another name for an ordered list would be a "numbered list" because the 
+            browser will by default assign numeric values to items in the list
+        </h2>
+        <h3>The (ol) element represents a list where the items have been intentionally
+            orederd and where changing the order of the list would change the meaning
+        </h3>
+        <h3>(ol) represents the name and beginning of a list</h3>
+        <h4>(li)List item(/li)</h4>
+        <h4>(li)List item(/li)</h4>
+        <h2>Another name for an unordered list would be a "bulleted list"</h2>
+        <h3>The (ul) element represents a list where the items have no particular order or importance</h3>
+
+        <h2>Another type of list is the definion list that includes various name-value groups</h2>
+        <h3>Consists of definition term (dt) followed by definitions of terms (dd)</h3>
+        <h3>Used for:</h3>
+        <li>Terms and definitions</li>
+        <li>Metadata topics and values</li>
+        <li>Questions and answers</li>
+        <li>Any other group of name-value data</li>
+
+        <h1>Working With Tables</h1>
+
+        <h2>Tables got a bad name in previous versions of HTML as they were used to
+            control the presentation of data... not a job of the markup language
+        </h2>
+        <h2>Tables still make sense in many situation</h2>
+        <h3>Lots of numbers</h3>
+        <h3>Numerous fields of text that naturally fall into rows and columns</h3>
+
+        <h2>There is a lot of markup that occurs in order to create and work with tables</h2>
+        <h3>(table) -denotes the start and end of a table</h3>
+        <h4>Contains a border attribute which acts as a toggle to turn the border on/off</h4>
+        <h3>(tr) -denotes a table row a basic building block of HTML tables</h3>
+        <h3>(td) -provides the data for the rows which ultimately defines the columns as well</h3>
+        <h3>(thead) -defines the header for the table complete with (tr) and (td)</h3>
+        <h3>(tbody) -defines the body of the table, a table can have multiple body sections</h3>
+        <h3>(tfooter) -defines the footer</h3>
+        <h3>(caption) -only one supported must come directly following (table)</h3>
+        <h3>(colgroup) -only one supported must come directly following (caption)</h3>
+        <h2>You can spice things up a bit...</h2>
+        <h3>Use (colgroup) and styles to change the styles of invidual columns</h3>
+        <h3>Use the colspan attribute to create  (th) or (td) elements that span multiple columns</h3>
+        <h3>Use CSS to control all presentational elements of the table such as borders, placement, shadows ect...</h3>
+        
+    </body>
+</html>

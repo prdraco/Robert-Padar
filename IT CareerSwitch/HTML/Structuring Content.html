@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        header li {
+            font-size: 1.5em;
+        }
+        table th td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        table {
+            border-spacing: 10px;
+        }
+        thead {
+            background-color: rgb(97, 179, 104);
+            color: rgb(99, 73, 43);
+        }
+        tfoot {
+            background-color: rgb(150, 148, 148);
+            color: rgb(99, 73, 43);
+        }
+        .clearFloat {
+            clear: both;
+        }
+    </style>
+    </head>
+    <header>
+        <h1>Structuring Content</h1>
+        <li>Why Structure Matters</li>
+        <li>Controlling Document Outlines</li>
+        <li>Structure Elements</li>
+    </header>
+    <body>
+        <h1>Why Structure Matters</h1>
+
+        <h2 style="float: left; width: 70%;">All web pages have a sort of structure that we come to bot recognize and expect</h2>
+        <h3 style="float: left; width: 70%">Pages are structured into various section such as navigation menus, main content, 
+            additional content and so forth</h3>
+        <h2 style="float: left; width: 70%">This is so common we intuitively recognize it but what about those who are impaired</h2>
+        <h2 style="float: left; width: 70%">In addition people use search engines which rely on the structure of the data</h2>
+
+        <table>
+            <caption>
+                <tr><th style="background-color: rgb(228, 187, 99); color: rgb(99, 73, 43);" colspan="2">Navigation Menu</th></tr>
+            </caption>
+
+            <thead>
+                <tr><th colspan="2">Company Information</th></tr>
+            </thead>
+            <tr><td style="color: rgb(99, 73, 43); background-color: rgb(212, 124, 114); width: 170px; height: 130px; text-align: center;">Main Content</td>
+                <td style="background-color: rgb(245, 134, 90); color: rgb(99, 73, 43); width: 120px; text-align: center;">Additional Related Content</td></tr>
+            <tfoot>
+                <tr><th colspan="2">Copyrights Contact info Navigation</th></tr>
+            </tfoot>
+        </table>
+
+        <h2 class="clearFloat">Without structuring elements your page doesn't actually have a structure 
+            regardless of how it appears
+        </h2>
+        <h2>Those who are visually or otherwise impaired and are using screen readers
+            and other technologies rely on the underlying structure of the document
+        </h2>
+        <h2>Its easy to forget...but it's best practice to develop web pages with this in 
+            mind and it doesn't take a lot of extra work
+        </h2>
+        <h2>Semantics</h2>
+        <h3>The use of HTML markup to enchance and reinforce three meaning of the page's 
+            content rather than merely concerning the look and feel of the content
+        </h3>
+        <h3>Semantic elements are elements with meaning that help to define the page
+            content and can be used as opposed to non-semantic elements like (div) and (span)
+        </h3>
+
+        <h2 style="float: left; width: 60%;">Semantic elements:</h2>
+        <h3 style="float: left; width: 60%;">(article)<br>
+        (aside)<br>
+        (section)<br>
+        (nav)<br>
+        (header)<br>
+        (footer)</h3>
+        <h2 style="float: left; width: 60%;">Several additional elements exist as well</h2>
+
+        <img style="padding: 3em;" src="images/sem_elements.gif" alt="semantic">
+
+        <h1>Controlling Document Outlines</h1>
+
+        <h2>HTML uses semantic elements like headings and sectioning tags to describe
+            the outline of the page's contents very similar to a table of contents
+        </h2>
+        <h3>Provides the ability to skim and search your files</h3>
+        <h3>Identifies different types of content and how it relates to other content</h3>
+
+        <h1>Structure Elements</h1>
+
+        <h2>The (nav) element defines a set of navigational links within a page</h2>
+        <h3>Intended for large blocks of navigational links</h3>
+        <h3>Not all links in the document should be inside a (nav) element</h3>
+
+        <h2>The (article) element</h2>
+        <h3>Specifies independent self-contained content</h3>
+        <h3>Often confused with the (section) element</h3>
+        <h3>An article should make sense on its own and it should be possible to distribute it
+            independently from the rest of the site.
+        </h3>
+        <h4>Forum posts<br>
+        Blog post<br>
+        News stroy<br>
+        Comment</h4>
+        
+        <h2>The (section) element</h2>
+        <h3>Defines sections in a document, such as chapters, headers, footers or any other 
+            sections of the document
+        </h3>
+        <h3>When it would make sense to syndicate the content authors are encouraged to use
+            the (article) element instead
+        </h3>
+        <h3>Not a generic container element for styling purposes but instead a thematic
+            grouping of content
+        </h3>
+
+        <h2>The (aside) element</h2>
+        <h3>Designed to represent relaed content such as that content that you might find in a sidebar</h3>
+        <h3>The sidebar is one of the most common elements in a web page but before HTML5
+            there wasn't a semantic element to represent this type of content
+        </h3>
+
+        <h2>The (div) element</h2>
+        <h3>Allows you to structure or section content without giving it any additional semantic meaning</h3>
+        <h3>Anonymus grouping tag that doesn't really "mean" anything</h3>
+        <h4>If there is a tag that passes along the semantic meaning of the text it should be used instead</h4>
+        
+    </body>

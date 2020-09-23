@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css"
+    href="normalize.css">
+</head>
+<article>
+    <header> <style>
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        color: red;
+        font-style: italic;
+    }
+    h1 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: blue;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    h3 {
+        margin: 2em;
+    }
+    </style>
+    <h1 style="color: lightblue;"
+    style="text-shadow: 2px 2px 4px black;">Working With Page Layouts</h1>
+      
+    <b style="color: crimson;">Posted by Robert Padar</b>
+      
+    <p style="text-align: center;">   
+        - Positioning Elements
+        - Floating Elements
+        - Controlling Display and Visibility
+<style type="text/css">
+#box1 {
+    background-color: #18FF81;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 20px;
+    border-radius: 10px;
+}
+#box2 {
+    background-color: rgb(0,255,255);
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    border: 5px dotted black;
+    margin: 10px;
+    position: relative;
+    left: 150px;
+    top: 40px;
+    overflow: scroll;
+}
+
+</style>
+
+<h1>Positioning Elements</h1>
+
+<h3> As the name implies the CSS positioning property is used to configure the location of the element on the page</h3>
+<h3> In the case of an overlap the positioning element specifies which element should be on top</h3>
+<h3> Four separate methods exist for positioning elements</h3>
+<h3> Static positioning:</h3>
+<p>     -Elements are positioned according to the normal flow of the page</p>
+<p>     -All HTML elements use static positioning by default</p>
+<p>     -There generally isn't a reason to specify this type of positioning unless you are attempting to override another style rule</p>
+<h3> Relative positioning is a method that positions an element "relative to its normal position":</h3>
+<p>     -Normal is the default position when no positioning rule is specified</p>
+<p>     -Normal is also used when static positioning is in place</p>
+<h3> So if an element would normally be directly beneath the precending element using relative positioning will change that position in comparison with the normal position</h3>
+<h3> Relative position can result in elements that overlap in which case you have to use the z-index property</h3>
+<p>     Element with the greater z-index value be posotioned in front</p>
+
+<p id="box1">Box1</p>
+<p id="box2">Box2 And this is the example how to create a scroll line inside the box.</p>
+
+<h3 style="padding: 10px;"> Fixed positioning means that an element will always stay at its assigned location and will not move even when the page is scrolled:</h3>
+<p>     -Headers</p>
+<p>     -Social sharing buttons</p>
+<p>     -Footers</p>
+<h3> When using fixed positioning you can use the top property to specify the number of pixels the element should be from the top of the page and the left property for distance from left of the page</h3>
+
+<h1>Floating Elements</h1>
+<h3> Floating is a technique used to arrange elements on a page by taking them out of the normal flow:</h3>
+<p>     -Float: Left; - pushes the element to the left the furthest it can go</p>
+<p>     -Float: Right; - pushes the element to the right the furthest it can go</p>
+<h3> Items that are not configured to float other object will follow normal flow and flow around the floated element</h3>
+
+<style type="text/css">
+    div {
+    padding: 10px;
+    border: 1px dashed black;
+    margin: 5px;
+    float: left;
+    }
+    #box3 {
+        width: 150px;
+        height: 120px;
+    }
+    #box4 {
+        width: 60px;
+        height: 170px;
+    }
+    #box5 {
+        width: 30px;
+        height: 50px;
+    }
+    #box6 {
+        width: 110px;
+        height: 20px;
+    }
+    #box7 {
+        width: 170px;
+        height: 90px;
+        display: block;
+        visibility: hidden;
+    }
+    #box8 {
+        width: 50px;
+        height: 180px;
+    }
+    #box9 {
+        width: 30px;
+        height: 110px;
+    }
+    
+    .clearFloat {
+        clear: both;
+    }
+
+</style>
+<body>
+    <div id="box3">BOX3</div>
+    <div id="box4">BOX4</div>
+    <div id="box5">BOX5</div>
+    <div id="box6">BOX6</div>
+    <div id="box7">BOX7</div>
+    <div id="box8">BOX8</div>
+    <div id="box9">BOX9</div>
+    
+    <p class="clearFloat">This is some text is not floating</p>
+    <p>This is an other text is not floating</p>
+
+<h1>Controlling Display and Visibility</h1>
+
+<h3> In addition to controlling the positioning of elements using position and float you can control the visibility of those elements on the page as well</h3>
+<h3> The properties allow you to remoce or hide elements when necessary:</h3>
+<p>     -Display</p>
+<p>     -Visibility</p>
+
+<h3>The two CSS properties that contorl wheter or not elements apper and how they apper are DISPLAY and VISIBILITY</h3>
+<p> Display contols how the element is displayed and has three possible values:</p>
+<p>     -None - the element dissapears from the page</p>
+<p>     -Inline - the element is displayed as an inline element and thus does not start and end with a new line.</p>
+<p>     -Block - the element is displayed as a block element and starts and ends with a new line</p>
+<h3> Visibility can be used to hide an element:</h3>
+<p>     -Visibility: Hidden;</p>
+<p>     -This hides the elements but it is still present on the page</p>
+
+</body>

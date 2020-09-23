@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <Body>
+        <H1>What can JavaScript Do?</H1>
+
+        <p id="demo">JavaScript can change HTML content.</p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+        Click me!</button>
+    
+        <H1>JavaScript can change images</H1>
+
+        <img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="150" height="180">
+        <p>Click the light bulb to turn on/off the light.</p>
+
+        <script>
+            function changeImage() {
+                var image = document.getElementById("myImage");
+                if (image.src.match("bulbon")) {
+                    image.src = "pic_bulboff.gif";
+                } else {
+                    image.src = "pic_bulbon.gif";
+                }
+            }
+        </script>
+        <h1 id="demo2">JavaScript can change the style of an HTML element.</h1>
+         <script>
+             function myFunction() {
+                 var x = document.getElementById("demo2");
+                 x.style.fontSize = "25px";
+                 x.style.color = "red";
+             }
+         </script>
+         <button type="button" onclick="myFunction()" style="height: 30px; width: 50px;"></button>
+        <h1>Getting the right tools!</h1>
+        <h2>The browser matters</h2>
+        <p>The web browser is the primarily tool and environment in which you JavaScript 
+            run and the choich of browser is important</p>
+        <p>Though other development tools will exist modern browsers may have all you 
+            require to work with JavaScript already included:</p>
+        <p> -Mozilla and Chrome are the best browsers to use when working with JavaScript</p>
+        <p> -Stay away from older browsers, especially older versions of IE</p>
+        <h2>Unlike many other programming languages JavaScript has no real program 
+            association meaning there isn't ONE program that you must or should use 
+            when coding JavaScript</h2>
+        <h2>All modern web editors will suppor JavaScript editing</h2>
+        <h2>Its so platform agnostic that you should really just stick with whatever 
+            program that you are using. This could be a free program like TextEdit, notepad, 
+            Notepad++ or Aptana or additional programs that you have to pay for</h2>
+        
+        <h2>JavaScript does not have any built-in print or display functions but there 
+            various ways that it can "display" information</h2>
+        <h2>Realize that these display options are often for developers and not end users</h2>
+        <p> Writing to an alert box</p>
+        <p> Writing HTML output</p>
+        <p> Writing to an HTML element</p>
+        <p> Writing into the browsre console</p>
+
+        <h2>The alert box:</h2>
+        <p>(script)</p>
+        <p>window.alert(5+6);</p>
+        <p>(/script)</p>
+        <p>Quite an annoying way of getting information</p>
+        
+        <h2>The document.write()</h2>
+        <p>(script)</p>
+        <p>document.write(5+6);</p>
+        <p>(/script)</p>
+        <p>Only for testing</p>
+        <p>If done after page is loaded it eliminates all HTML</p>
+        
+        <h2>In most cases that you want to "display" data you will use the innerHTML 
+            property and the DOM in order to write information to the page</h2>
+            <p>(script)</p>
+            <p>document.getElementByID("demo").innerHTML=5+6;</p>
+            <p>(/script)</p>
+
+        <h2>Another option is console.log()</h2>
+            <p>Used by developers</p>
+            <p>Not intended to display information to end users</p>
+            <p>(script)</p>
+            <p>console.log(5+6);</p>
+            <p>(/script)</p>
+
+    </Body>
+</html>

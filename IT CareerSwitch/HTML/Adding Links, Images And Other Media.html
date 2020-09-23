@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        header li {
+            font-size: 1.5em;
+        }
+        .clearFloat {
+            clear: both;
+        }
+    </style>
+    </head>
+    <header>
+        <h1>Adding Links, Images And Other Media</h1>
+        <li>Working With Links</li>
+        <li>Working With Images</li>
+    </header>
+    <body>
+        <h1>Working With Links</h1>
+
+        <h2>The World Wide Web (www) is all about links to other locations making it a 
+            giant playground where you can surf at high speed to different parts of the world
+        </h2>
+        <h2>Hyperlinks give your web page the ability to interact with other sources
+            around it in fantastic ways
+        </h2>
+        <h2>Virtually every web page beyond the simplest example will have at least some
+            form of hyperlink
+        </h2>
+        <h2>In order to create hyperlinks you must have three pieces of information</h2>
+        <h3>Web address</h3>
+        <h3>Some text to display</h3>
+        <h3>An anchor element (a)</h3>
+        <h4>An inline element that should always be placed within a block element</h4>
+        <h4>Used to anchor a URL to some text on your webpage</h4>
+        <h4>Contains an href attribute that ties everything together</h4>
+        <h4>(a href=http://www.google.co.uk)Google!(/a)</h4>
+        <h2>Linking to resources</h2>
+        <h3>Other HTML pages</h3>
+        <h3>Different locations on the same HTML page</h3>
+        <h3>Resources that aren't even HTML</h3>
+        <h4>E-mail addresses</h4>
+        <h4>Photos and videos</h4>
+        <h4>Downloadable files</h4>
+        <h2>Absolute Links</h2>
+        <h3>Use a complete URL (uniform resource locator) to connect to a web page or online resource</h3>
+        <h3>URL components</h3>
+        <h3><strong style="background-color: green; color: white;">&ensp;&ensp;&ensp;&ensp;Protocol&ensp;&ensp;&ensp;&ensp;
+        </strong>&ensp;<strong style="background-color: green; color: white;">&ensp;&ensp;&ensp;Domain Name&ensp;&ensp;&ensp;
+        </strong>&ensp;<strong style="background-color: green; color: white;">&ensp;&ensp;&ensp;File name&ensp;&ensp;&ensp;</strong></h3>
+        <h3>&ensp;&ensp;http://&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;www.abc.com&ensp;&ensp;&ensp;
+            &ensp;&ensp;&ensp;&ensp;/default.html</h3>
+        <h2>Relative Links</h2>
+        <h3>Use a type of shorted to specify the URL you are pointing to</h3>
+        <h3>Only used in certain situations like linking within the same page or the same site</h3>
+        <h4>When the browser sees a link like (a href="about.html)About(/a) it assumes that
+            because the domain name is missing it is a relative link
+        </h4>
+        <h4>The browser then uses the domain name to locate the resource</h4>
+        <h4>Additional steps are required if the page is in a different directory</h4>
+        <h3>Relative links have the advantage of functioning even if you happen to move the 
+            web site to another server or domain!
+        </h3>
+
+        <h2>URLs can be fairly picky sometimes even being case sensitive so if your URL 
+            and (a) element aren't working try these steps
+        </h2>
+        <h3>Check the capitalization</h3>
+        <h3>Check the extension</h3>
+        <h3>Check the filename</h3>
+        <h3>Check the URL syntax http:// is required for absolute links</h3>
+        <h3>Copy and paste</h3>
+        <h2>There are various ways in which you can customize the links your web page</h2>
+        <h3>Open linked documents in new windows</h3>
+        <h4>Use the target attribute</h4>
+        <h3>Link to a specific location within a web page</h3>
+        <h4>Use the name attribute</h4>
+        <h4>Your own web page</h4>
+        <h4>The web page of another site</h4>
+        <h3>Linking to non-HTML resources</h3>
+        <h4>Audio</h4>
+        <h4>Video</h4>
+        <h4>Files</h4>
+
+        <h1>Working With Images</h1>
+
+        <h2>Images play an important role on the web page and can include:</h2>
+        <li>Logos</li>
+        <li>Banners</li>
+        <li>Clickable navigation aids</li>
+        <li>Content</li>
+        <h2>When well used they are a key element of page design and when used poorly
+            they can result in an underable, unintelligible page and a poor user experience
+        </h2>
+        <h2>The first step to working with images is to determine the appropirate file 
+            format and size for images
+        </h2>
+        <h3>Web-friendly images aren't the same as images for other mediums</h3>
+        <h4>Require a smaller size for fast page loading</h4>
+        <h4>Require a cross-platform file type</h4>
+        <h2>Best general use file formats</h2>
+        <h3>GIF - Graphics Interchange Format</h3>
+        <h4>Supports only up to 256colors</h4>
+        <h4>Best for less-complex, non-photographic images like icons, line art or clip art</h4>
+        <h3>JPEG - Joint Photographic Experts Group</h3>
+        <h4>Supperts 24-bit color</h4>
+        <h4>Cross platform and application independent</h4>
+        <h4>Compromises quality when file is compressed though a balance can be struck</h4>
+        <h3>PNG - Portable Network Graphics</h3>
+        <h4>Supports up to 32-bit-color</h4>
+        <h4>Combines the best aspects of GIF and JPEG</h4>
+        <h4>Offers the best balance between quality and file size</h4>
+        <h2>Adding images to the page requires that you know the location of the image 
+            and this works best if you can use relative locations
+        </h2>
+        <h3>You could use ablosute source references to images stored elswehere</h3>
+        <h3>Using relative source references is preferred</h3>
+        <h4>Control</h4>
+        <h4>Speed</h4>
+        <h4>Coryright</h4>
+        <h3>Requires that images be stored on the web server</h3>
+        <h3>Best practice is to create a separate images directory so that relative path to
+            all the files on the page is the same
+        </h3>
+        <h2>In order to place an image on the page you will use the (img) element</h2>
+        <h3>Known as an empty or signleton element because it only uses a single tag</h3>
+        <h3>Enables you to specify the place on the page where you would like to place the image</h3>
+        <h3>Uses the src attribute to identify the location of the image</h3>
+        <h4>&ensp;&ensp;(p)What a view we have using the Hubble telescope!(/p) (img src="hubbleview1.jpg")</h4>
+        <h3>Should use the alt attribute in order to define alternative text to screen readers</h3>
+        <h3>Other attributes</h3>
+        <h4>Title</h4>
+        <h4>Height</h4>
+        <h4>Width...</h4>
+        <h2>Images also can be used as navigational aids providing an image that is a link
+            to another resource within the site or on another site
+        </h2>
+        <h3>Nests the (img) element within an (a) element</h3>
+        <h3>(img) element goes in the place that would contain the text to display for the hyperlink</h3>
+        
+    </body>
