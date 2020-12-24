@@ -10,7 +10,7 @@ describe('Phrase', () => {
 		  assert.equal(result, expectedInitials);
 		});
 	});
-	describe('.initials', () => {
+	describe('.initials2', () => {
 		it('returns the initials of a name', () => {
 		  const nameInput = 'Juan Manuel Santos';
 		  const expectedInitials = 'JMS';
