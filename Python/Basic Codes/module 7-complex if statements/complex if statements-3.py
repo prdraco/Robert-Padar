@@ -17,4 +17,4 @@ if sport == 'HOCKEY':
     print('Go hockey!!!')
     if team == 'SENATORS':
         print('Good luck to getting the cup in this year')
-        print('We do love hocky')
+        print('We do love hockey')
